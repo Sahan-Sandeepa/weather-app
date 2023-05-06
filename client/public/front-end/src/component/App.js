@@ -1,20 +1,22 @@
-import logo from '../../src/logo.svg';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import CityDetail from './pages/CityDetail';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <body>
+        <main>
+          <Routes>
+
+            <Route path="/" element={<Home />} />
+            <Route path='/:cityId' element={<CityDetail />} />
+
+          </Routes>
+        </main>
+      </body>
+
+    </BrowserRouter>
   );
 }
 
