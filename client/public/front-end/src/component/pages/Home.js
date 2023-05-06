@@ -19,15 +19,15 @@ const Home = () => {
                 getQueryWeatherData('1796236'),
                 getQueryWeatherData('3143244'),
             ]);
-             // Setting the fetched weather data to the state variable `defaultCities`.
+            // Setting the fetched weather data to the state variable `defaultCities`.
             setDefaultCities(citiesWeatherData);
         };
-         // Calling the fetchData() function only once on component mount using useEffect hook with an empty dependency array.
+        // Calling the fetchData() function only once on component mount using useEffect hook with an empty dependency array.
         fetchData();
     }, []);
 
     const removeCityWeatherData = (name) => {
-         // Filtering out the city weather data object from the `defaultCities` array whose name matches with the provided `name`.
+        // Filtering out the city weather data object from the `defaultCities` array whose name matches with the provided `name`.
         setDefaultCities(defaultCities.filter((city) => city.name !== name));
     };
     // Country codes object containing countries and their codes.
@@ -70,7 +70,7 @@ const Home = () => {
                         </button>
                         <Link to={`/${cityWeather.id}`}>
 
-                        <div className="flex flex-col justify-between h-full">
+                            <div className="flex flex-col justify-between h-full">
                                 <div className="flex flex-col text-center text-md font-bold text-gray-900" style={{ marginTop: "20px", marginRight: "42%" }}>
                                     <span className="uppercase">
                                         {cityWeather.name}
@@ -86,9 +86,11 @@ const Home = () => {
                                     </span>
                                 </div>
 
-                                
+                                {/* <!-- A container div that holds two smaller divs, one on the left and one on the right --> */}
                                 <div className="flex justify-between h-36">
                                     <div className="flex flex-col justify-center items-center text-gray-700" style={{ marginLeft: "15%" }}>
+
+                                        {/* <!-- Weather icon --> */}
                                         <div className="flex justify-center mt-2" >
                                             <img
                                                 src={`//openweathermap.org/img/wn/${cityWeather.weather[0].icon}.png`}
@@ -96,18 +98,26 @@ const Home = () => {
                                                 className="w-16 h-16"
                                             />
                                         </div>
+                                        {/* 
+                                        <!-- Weather description --> */}
                                         <div className="text-center mt-2" style={{
                                             color: "white",
                                             fontSize: "20px"
                                         }}>{cityWeather.weather[0].description}</div>
                                     </div>
-                                    
+
+                                    {/* <!-- Right div that contains temperature information --> */}
                                     <div className="flex flex-col justify-center items-center text-gray-700" style={{
                                         marginRight: "15%", color: "white", marginBottom: "10%"
                                     }}>
-                                        <div className="text-4xl font-bold" style={{fontSize: "44px"
+                                        {/* <!-- Current temperature --> */}
+                                        <div className="text-4xl font-bold" style={{
+                                            fontSize: "44px"
                                         }}>{cityWeather.main.temp.toFixed(1)}&deg;C</div>
-                                        <div className="text-xs" style={{ marginTop: "65%"
+
+                                        {/* <!-- Temperature range --> */}
+                                        <div className="text-xs" style={{
+                                            marginTop: "65%"
                                         }}>
                                             Temp Min: {cityWeather.main.temp_min.toFixed(1)}&deg;C <br />
                                             Temp Max: {cityWeather.main.temp_max.toFixed(1)}&deg;C
@@ -115,7 +125,11 @@ const Home = () => {
                                     </div>
                                 </div>
 
-                                <div style={{ backgroundColor: "hsl(228deg 11.81% 24.9%)", borderBottomLeftRadius: "3px", borderBottomRightRadius: "3px", marginBottom: "13px"}}>
+                                {/* // This div contains weather information about the city, including pressure, humidity, and visibility. */}
+
+                                {/* // The weather information is dynamically generated using the cityWeather object. */}
+
+                                <div style={{ backgroundColor: "hsl(228deg 11.81% 24.9%)", borderBottomLeftRadius: "3px", borderBottomRightRadius: "3px", marginBottom: "13px" }}>
                                     <div className="flex justify-between h-20 items-center mt-5">
                                         <div className="text-gray-700 text-xs flex flex-col" style={{
                                             color: "white",
@@ -138,6 +152,8 @@ const Home = () => {
                                                 {cityWeather.wind.speed.toFixed(1)} m/s 120 Degree
                                             </div>
                                         </div>
+
+                                        {/* // It also includes information about wind speed and direction, as well as the sunrise and sunset times for the city. */}
                                         <div className="border-l-2 border-white h-8"></div>
                                         <div className="text-gray-700 text-xs flex flex-col" style={{
                                             color: "white",
@@ -152,7 +168,7 @@ const Home = () => {
                                     </div>
                                 </div>
                             </div></Link>
-                        </div>
+                    </div>
                 ))}
             </div>
         </>
