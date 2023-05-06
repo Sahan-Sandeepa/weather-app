@@ -1,6 +1,9 @@
+/* // Importing base, components, and utilities from Tailwind CSS */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* // Styling for the card element */
 .card {
     background-color: white;
     border: 1px solid #d9d9d9;
@@ -12,42 +15,52 @@
     box-shadow: 0 2px 8px #f0f1f2;
 }
 
+/* 
+Styling for the card element on hover */
 .card:hover {
     box-shadow: 0 4px 16px #d9d9d9;
 }
 
+/* Styling for the selected card element */
 .card.selected {
     border: 1px solid #1890ff;
     box-shadow: 0 4px 16px #d9d9d9;
 }
 
+/* Styling for the close button inside the selected card element */
 .card.selected .card-content {
     color: white;
 }
 
+/* Styling for the content inside the card element */
 .card.selected .card-close {
     color: white;
 }
 
+/* Styling for the title inside the card element */
 .card-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+/* Styling for the description inside the card element */
 .card-title {
     font-weight: bold;
     font-size: 20px;
 }
 
+/* Styling for the temperature inside the card element */
 .card-description {
     font-size: 14px;
 }
 
+/* Styles for temperature in a card */
 .card-temperature {
     font-size: 16px;
 }
 
+/* Styles for close button in a card */
 .card-close {
     position: absolute;
     top: 8px;
@@ -55,6 +68,7 @@
     cursor: pointer;
 }
 
+/* Styles for the bottom section of a card */
 .card-bottom {
     background-color: black;
     color: white;
@@ -67,45 +81,57 @@
     border-bottom-right-radius: 4px;
 }
 
+/* Media queries for screens with max width of 767px */
 @media screen and (max-width: 767px) {
+
+    /* / Styles for flex container with direction of column and content that is evenly spaced along the main axis */
     .flex {
         flex-direction: column;
     }
 
+    /* Styles for flex container with direction of column and a fixed height */
     .flex.justify-between.h-36 {
         height: auto;
     }
 
+    /* Styles for child div elements of a flex container with direction of column and a fixed height */
     .flex.justify-between.h-36>div {
         width: 100%;
         margin: 0;
         text-align: center;
     }
 
+    /* Styles for a horizontal border with white color, 2 pixels in width and a top placement */
     .border-l-2 {
         border-top: 2px solid white;
         margin: 5% 0;
     }
-        .flex.justify-between.h-20.items-center {
-            flex-direction: column;
-            align-items: center;
-        }
-    
-        .border-l-2.border-white.h-8 {
-            display: none;
-        }
-    
-        .text-gray-700.text-xs.flex.flex-col {
-            margin: 1px;
-            text-align: center;
-        }
-    
-        .text-lg.font-bold.mr-2 {
-            margin-top: 10px;
-            text-align: center;
-        }
-    
-        svg.h-6.w-6.text-white {
-            margin: 0 auto;
-        }
+
+    /* Styles for flex container with direction of column, fixed height and evenly spaced content along the main axis and the cross axis */
+    .flex.justify-between.h-20.items-center {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Styles for a horizontal border with white color, 2 pixels in width and a height of 8 pixels */
+    .border-l-2.border-white.h-8 {
+        display: none;
+    }
+
+    /* Styles for gray-colored text with small font size and a vertical flex container */
+    .text-gray-700.text-xs.flex.flex-col {
+        margin: 1px;
+        text-align: center;
+    }
+
+    /* Styles for text with large font size and bold weight */
+    .text-lg.font-bold.mr-2 {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    /* Styles for an SVG element with white color and a height and width of 6 pixels */
+    svg.h-6.w-6.text-white {
+        margin: 0 auto;
+    }
 }
