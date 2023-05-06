@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 .card {
     background-color: white;
     border: 1px solid #d9d9d9;
@@ -62,4 +65,47 @@
     right: 0;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
+}
+
+@media screen and (max-width: 767px) {
+    .flex {
+        flex-direction: column;
+    }
+
+    .flex.justify-between.h-36 {
+        height: auto;
+    }
+
+    .flex.justify-between.h-36>div {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .border-l-2 {
+        border-top: 2px solid white;
+        margin: 5% 0;
+    }
+        .flex.justify-between.h-20.items-center {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .border-l-2.border-white.h-8 {
+            display: none;
+        }
+    
+        .text-gray-700.text-xs.flex.flex-col {
+            margin: 1px;
+            text-align: center;
+        }
+    
+        .text-lg.font-bold.mr-2 {
+            margin-top: 10px;
+            text-align: center;
+        }
+    
+        svg.h-6.w-6.text-white {
+            margin: 0 auto;
+        }
 }
