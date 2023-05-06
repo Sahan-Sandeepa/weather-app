@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 const Home = () => {
     const [defaultCities, setDefaultCities] = useState([]);
 
+    // Fetching weather data for default cities using Promise.all() function to fetch data for multiple cities asynchronously.
     useEffect(() => {
         const fetchData = async () => {
             const citiesWeatherData = await Promise.all([
@@ -18,14 +19,18 @@ const Home = () => {
                 getQueryWeatherData('1796236'),
                 getQueryWeatherData('3143244'),
             ]);
+             // Setting the fetched weather data to the state variable `defaultCities`.
             setDefaultCities(citiesWeatherData);
         };
+         // Calling the fetchData() function only once on component mount using useEffect hook with an empty dependency array.
         fetchData();
     }, []);
 
     const removeCityWeatherData = (name) => {
+         // Filtering out the city weather data object from the `defaultCities` array whose name matches with the provided `name`.
         setDefaultCities(defaultCities.filter((city) => city.name !== name));
     };
+    // Country codes object containing countries and their codes.
     const countryCodes = {
         "Sri Lanka": "SL",
         "Japan": "JP",
