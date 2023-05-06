@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getQueryWeatherData } from '../utils/allApi';
+import { getQueryWeatherData } from '../utils/Api';
 import { Link } from 'react-router-dom';
 
 
