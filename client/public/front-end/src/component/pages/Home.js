@@ -42,6 +42,8 @@ const Home = () => {
     return (
         <>
             <div className="mt-8 mx-auto my-4 md:my-8 w-4/5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 gap-10" >
+
+                {/* <!-- This is the data mapping starts--> */}
                 {defaultCities.map((cityWeather) => (
                     <div
                         className="transition duration-500 ease-in-out transform bg-sky-200 rounded-lg hover:scale-105 cursor-pointer border flex flex-col text-center p-6 relative"
@@ -49,6 +51,7 @@ const Home = () => {
                         style={{ padding: "10px 0px 0px 0px" }}
                     >
 
+                        {/* <!-- This button element allows removing of city data --> */}
                         <button
                             className="absolute top-0 right-0 p-2 text-gray-600 hover:text-gray-900"
                             onClick={() => removeCityWeatherData(cityWeather.name)}
@@ -68,8 +71,11 @@ const Home = () => {
                                 />
                             </svg>
                         </button>
+
+                        {/* <!-- This Link element directs to a page with more detailed city weather data --> */}
                         <Link to={`/${cityWeather.id}`}>
 
+                            {/* <!-- This div element contains the name of the city and the date and time --> */}
                             <div className="flex flex-col justify-between h-full">
                                 <div className="flex flex-col text-center text-md font-bold text-gray-900" style={{ marginTop: "20px", marginRight: "42%" }}>
                                     <span className="uppercase">
@@ -170,6 +176,9 @@ const Home = () => {
                             </div></Link>
                     </div>
                 ))}
+
+                {/* mapping end here */}
+
             </div>
         </>
     );
