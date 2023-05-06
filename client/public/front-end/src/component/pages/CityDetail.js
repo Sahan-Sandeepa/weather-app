@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { getQueryWeatherData } from '../utils/allApi';
+import { getQueryWeatherData } from '../utils/Api';
 import '../assets/style.css';
 
 const CityDetail = () => {
