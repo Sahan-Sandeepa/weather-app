@@ -3,12 +3,17 @@
 @tailwind components;
 @tailwind utilities;
 
+HTML {
+    background-image: url('./4122410.jpg');
+}
+
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    margin-top: 10%;
 }
 
 /* // Styling for the card element */
@@ -31,7 +36,7 @@ Styling for the card element on hover */
 
 /* Styling for the selected card element */
 .card.selected {
-    border: 1px solid #1890ff;
+    border: 1px solid #0c78dc;
     box-shadow: 0 4px 16px #d9d9d9;
 }
 
@@ -145,6 +150,19 @@ Styling for the card element on hover */
 
     .container {
         padding: 0 1rem;
+    }
+
+    .search-container {
+        flex-direction: column;
+    }
+
+    .search-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .search-btn {
+        width: 100%;
     }
 }
 
