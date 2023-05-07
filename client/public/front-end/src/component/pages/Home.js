@@ -41,7 +41,7 @@ const Home = () => {
 
     return (
         <>
-            <div className="mt-8 mx-auto my-4 md:my-8 w-4/5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 gap-10" >
+            <div className="mt-8 mx-auto my-4 md:my-8 w-4/5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 gap-10">
 
                 {/* <!-- This is the data mapping starts--> */}
                 {defaultCities.map((cityWeather) => (
@@ -77,7 +77,7 @@ const Home = () => {
 
                             {/* <!-- This div element contains the name of the city and the date and time --> */}
                             <div className="flex flex-col justify-between h-full">
-                                <div className="flex flex-col text-center text-md font-bold text-gray-900" style={{ marginTop: "20px", marginRight: "42%" }}>
+                                <div className="flex flex-col text-center text-md font-bold text-gray-900" style={{ marginTop: "20px", marginRight: "42%", }}>
                                     <span className="uppercase">
                                         {cityWeather.name}
                                     </span>
