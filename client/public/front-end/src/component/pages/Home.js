@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { getQueryWeatherData } from '../../api/Api';
 import { Link } from 'react-router-dom';
 import SearchBar from './../utils/SearchBar'
+import cloudIcon from '../assets/cloudIcon.jpg';
+import Footer from '../utils/Footer';
 
 const Home = () => {
     const [defaultCities, setDefaultCities] = useState([]);
@@ -40,9 +42,11 @@ const Home = () => {
     };
 
     return (
-
-        <div className="container">
-
+        <><div className="container">
+            <div className="xcol">
+                <img src={cloudIcon} alt="Cloud Icon" />
+                <div className="icon-font">Weather App</div>
+            </div>
             <SearchBar />
 
             <div className="mt-8 mx-auto my-4 md:my-8 w-4/5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 gap-10">
@@ -71,8 +75,7 @@ const Home = () => {
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
                                     strokeWidth={2}
-                                    d="M6 18L18 6M6 6l12 12"
-                                />
+                                    d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>
 
@@ -103,8 +106,7 @@ const Home = () => {
                                         <img
                                             src={`//openweathermap.org/img/wn/${cityWeather.weather[0].icon}.png`}
                                             alt="weather icon"
-                                            className="w-16 h-16 mr-2"
-                                        />
+                                            className="w-16 h-16 mr-2" />
                                         <div>{cityWeather.weather[0].description}</div>
                                     </div>
 
@@ -164,8 +166,7 @@ const Home = () => {
                 {/* mapping end here */}
 
             </div>
-
-        </div>
+        </div><Footer /></>
     );
 };
 export default Home;
