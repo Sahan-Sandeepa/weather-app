@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { getQueryWeatherData } from '../../api/Api';
 import '../assets/style.css';
+import SearchBar from './../utils/SearchBar'
 
 const CityDetail = () => {
 
@@ -35,7 +36,7 @@ const CityDetail = () => {
     const countryCode = countryCodes[country] || country;
     return (
         <div className="transition duration-500 ease-in-out transform cursor-default flex flex-col text-center p-6 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2/3">
-
+            <SearchBar /><br/>
             <div className="transition duration-500 ease-in-out transform rounded-lg cursor-default bg-color">
                 <div className='third-contrainer'>
                     <div className="flex justify-between items-center mb-4 forth-contrainer">

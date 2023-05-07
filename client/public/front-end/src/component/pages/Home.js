@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getQueryWeatherData } from '../../api/Api';
 import { Link } from 'react-router-dom';
-import { SearchBar } from './../utils/SearchBar'
+import SearchBar from './../utils/SearchBar'
 
 const Home = () => {
     const [defaultCities, setDefaultCities] = useState([]);
@@ -39,32 +39,11 @@ const Home = () => {
         "United State": "US"
     };
 
-    const handleInputChange = (event) => {
-        setSearchTerm(event.target.value);
-    };
-
-    const handleSearch = (event) => {
-        event.preventDefault();
-    };
     return (
 
         <div className="container">
 
-            <form className="flex justify-center items-center">
-                <input
-                    type="text"
-                    placeholder="Search..."
-                    onChange={handleInputChange}
-                    className="border border-gray-300 rounded-l px-4 py-2 w-64 sm:w-80 md:w-96 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-                <button
-                    type="submit"
-                    onClick={handleSearch}
-                    className="bg-blue-500 hover:bg-blue-700 rounded-r text-white font-semibold px-4 py-2"
-                >
-                    Search
-                </button>
-            </form>
+            <SearchBar />
 
             <div className="mt-8 mx-auto my-4 md:my-8 w-4/5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 gap-10">
 
