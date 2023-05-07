@@ -36,15 +36,10 @@ const CityDetail = () => {
     return (
         <div className="transition duration-500 ease-in-out transform cursor-default flex flex-col text-center p-6 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2/3">
 
-            <div className="transition duration-500 ease-in-out transform rounded-lg cursor-default" style={{
-                backgroundColor: "hsl(228deg 11.81% 24.9%)"
-            }}>
-                <div style={{ backgroundColor: "hsl(210.51deg 78.48% 56.27%)", paddingTop: "10px" }}>
-                    <div className="flex justify-between items-center mb-4" style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', backgroundColor: "hsl(210.51deg 78.48% 56.27%)" }}>
-                        <div className="text-gray-900 font-bold text-md " style={{
-                            marginBottom: "1%", color: "white",
-                            fontSize: "24px"
-                        }}>
+            <div className="transition duration-500 ease-in-out transform rounded-lg cursor-default bg-color">
+                <div className='third-contrainer'>
+                    <div className="flex justify-between items-center mb-4 forth-contrainer">
+                        <div className="text-gray-900 font-bold text-md fifth-contrainer">
                             {/* A button that takes the user back to the home page. */}
                             <div className="absolute top-4 left-4 cursor-pointer">
                                 <Link to={"/"} key={city}>
@@ -62,9 +57,7 @@ const CityDetail = () => {
 
                         {/* Displays the current time, and the current month and day. */}
                         {/* This div contains the time and date. */}
-                        <div className="text-gray-700 text-sm font-normal" style={{
-                            backgroundColor: "hsl(210.51deg 78.48% 56.27%)", color: "white"
-                        }}>
+                        <div className="text-gray-700 text-sm font-normal date-time">
 
                             {new Date().toLocaleTimeString('en-US', {
                                 hour: 'numeric',
@@ -78,7 +71,7 @@ const CityDetail = () => {
                     </div>
 
                     <div className="flex justify-between h-36">
-                        <div className="flex flex-col justify-center items-center text-gray-700" style={{ marginLeft: "25%" }}>
+                        <div className="flex flex-col justify-center items-center text-gray-700 icon-description">
 
                             {/* Weather icon */}
                             <div className="flex justify-center mt-2" >
@@ -90,20 +83,14 @@ const CityDetail = () => {
                             </div>
 
                             {/* Weather description */}
-                            <div className="text-center mt-2" style={{
-                                color: "white",
-                                fontSize: "24px"
-                            }}>{cityWeather.weather[0].description}</div>
+                            <div className="text-center mt-2 description">{cityWeather.weather[0].description}</div>
                         </div>
 
                         {/* Middle vertical divider */}
-                        <div className="border-l-2 border-white h-14" style={{ marginTop: '5%' }}></div>
+                        <div className="border-l-2 border-white h-14 line-divider"></div>
 
                         {/* Right side section */}
-                        <div className="flex flex-col justify-center items-center text-gray-700" style={{
-                            marginRight: "25%", color: "white",
-                            fontSize: "24px"
-                        }}>
+                        <div className="flex flex-col justify-center items-center text-gray-700 Right-side-section">
 
                             {/* Current temperature */}
                             <div className="text-4xl font-bold">{cityWeather.main.temp.toFixed(1)}&deg;C</div>
@@ -119,12 +106,9 @@ const CityDetail = () => {
 
                 {/* // Displays pressure, humidity and visibility for a city */}
 
-                <div style={{ backgroundColor: "hsl(228deg 11.81% 24.9%)", borderBottomLeftRadius: "3px", borderBottomRightRadius: "3px", marginBottom: "13px" }}>
+                <div className='bottom-left'>
                     <div className="flex justify-between h-20 items-center mt-4">
-                        <div className="text-gray-700 text-xs flex flex-col" style={{
-                            color: "white",
-                            marginLeft: "15%"
-                        }}>
+                        <div className="text-gray-700 text-xs flex flex-col bottom-left-sub">
 
                             {/* // Displays pressure, humidity and visibility for a city */}
                             <div className="mb-1">Pressure: {cityWeather.main.pressure} hPa</div>
@@ -133,13 +117,11 @@ const CityDetail = () => {
                         </div>
                         <div className="border-l-2 border-white h-8"></div>
                         <div className="flex items-center">
-                            <div className="text-lg font-bold mr-2" style={{
-                                color: "white"
-                            }}>
+                            <div className="text-lg font-bold mr-2" style={{ color: "white" }}>
 
                                 {/* // Uses flexbox to position elements, and SVG for wind icon */}
-                                <div style={{ display: "flex", justifyContent: "center", marginBottom: "5%" }}>
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" style={{ transform: "rotate(45deg)", display: "flex", justifyContent: "center" }}>
+                                <div className='bottom-middle'>
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white bottom-middle-sub" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
                                     </svg>
                                 </div>
@@ -147,19 +129,12 @@ const CityDetail = () => {
                             </div>
                         </div>
                         <div className="border-l-2 border-white h-8"></div>
-                        <div className="text-gray-700 text-xs flex flex-col" style={{
-                            color: "white",
-                            marginRight: "15%",
-                        }}>
+                        <div className="text-gray-700 text-xs flex flex-col" style={{ color: "white", marginRight: "15%" }}>
 
                             {/* displays wind speed and direction, and sunrise/sunset times */}
                             <div className="mb-1">Sunrise: {new Date(cityWeather.sys.sunrise * 1000).toLocaleTimeString()}</div>
                             <div>Sunset: {new Date(cityWeather.sys.sunset * 1000).toLocaleTimeString()}</div>
                         </div>
-                        <div style={{
-                            backgroundColor: "hsl(228deg 11.81% 24.9%)",
-                            marginTop: "3px"
-                        }}></div>
                     </div>
                 </div>
 
