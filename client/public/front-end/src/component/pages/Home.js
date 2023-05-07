@@ -40,7 +40,7 @@ const Home = () => {
         "Australia": "AU",
         "United State": "US"
     };
-
+    const colors = ["hsl(210.51deg 78.48% 56.27%)", "hsl(153.05deg 47.97% 48.24%)", "hsl(0deg 45.79% 41.96%)", "hsl(29.17deg 68.57% 58.82%)", "hsl(304.51deg 45.79% 41.96%)", "hsl(251.45deg 56.22% 54.31%)", "hsl(85.19deg 45.79% 41.96%)"];
     return (
         <><div className="container">
             <div className="xcol">
@@ -52,11 +52,11 @@ const Home = () => {
             <div className="mt-8 mx-auto my-4 md:my-8 w-4/5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 gap-10">
 
                 {/* <!-- This is the data mapping starts--> */}
-                {defaultCities.map((cityWeather) => (
+                {defaultCities.map((cityWeather, index) => (
                     <div
-                        className="transition duration-500 ease-in-out transform bg-sky-200 rounded-lg hover:scale-105 cursor-pointer border flex flex-col text-center p-6 relative"
+                        className="transition duration-500 ease-in-out transform rounded-lg hover:scale-105 cursor-pointer border flex flex-col text-center p-6 relative"
                         key={cityWeather.id}
-                        style={{ padding: "10px 0px 0px 0px" }}
+                        style={{ padding: "10px 0px 0px 0px", backgroundColor: `${colors[index]} `}}
                     >
 
                         {/* <!-- This button element allows removing of city data --> */}
