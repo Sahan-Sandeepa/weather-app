@@ -163,33 +163,110 @@ Styling for the card element on hover */
     margin-right: 15%;
     margin-bottom: 14%;
 }
+
 .font-w {
     font-Size: 44px;
 }
+
 .font {
     color: white;
 }
-.bottom{
+
+.bottom {
     background-color: hsl(228deg 11.81% 24.9%);
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
     margin-bottom: 13px;
 }
+
 .bottom-left {
     color: white;
     margin-Left: 5%;
 }
-.bottom-middle{
+
+.bottom-middle {
     display: flex;
     justify-content: center;
     margin-bottom: 5%;
 }
+
 .bottom-middle-cenetr {
     transform: rotate(45deg);
     display: flex;
     justify-content: center;
 }
-.bottom-right{
+
+.bottom-right {
     color: white;
     margin-right: 5%;
+}
+
+.bg-color {
+    background-color: hsl(228deg 11.81% 24.9%);
+}
+
+.third-contrainer {
+    background-color: hsl(210.51deg 78.48% 56.27%);
+    padding-top: 10px;
+}
+
+.forth-contrainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: hsl(210.51deg 78.48% 56.27%);
+}
+
+.fifth-contrainer {
+    margin-bottom: 1%;
+    color: white;
+    font-size: 24px;
+}
+
+.date-time {
+    background-color: hsl(210.51deg 78.48% 56.27%);
+    color: white;
+}
+
+.icon-description {
+    margin-left: 25%;
+}
+
+.description {
+    color: white;
+    font-size: 24px;
+}
+
+.line-divider {
+    margin-top: 5%;
+}
+
+.Right-side-section {
+    margin-right: 25%;
+    color: white;
+    font-size: 24px;
+}
+
+.bottom-left {
+    background-color: hsl(228deg 11.81% 24.9%);
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    margin-bottom: 13px;
+}
+
+.bottom-left-sub {
+    color: white;
+    margin-left: 15%;
+}
+
+.bottom-middle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.bottom-middle-sub {
+    transform: rotate(45deg);
+    display: flex;
+    justify-content: center;
 }
