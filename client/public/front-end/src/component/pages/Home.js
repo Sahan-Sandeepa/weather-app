@@ -10,7 +10,6 @@ const Home = () => {
     useEffect(() => {
         const fetchData = async () => {
             const citiesWeatherData = await Promise.all([
-
                 getQueryWeatherData('1850147'),
                 getQueryWeatherData('2644210'),
                 getQueryWeatherData('2988507'),
@@ -40,8 +39,10 @@ const Home = () => {
     };
 
     return (
-        <>
-            <div className="mt-8 mx-auto my-4 md:my-8 w-4/5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 gap-10">
+
+            <div className="container">
+              
+               <div className="mt-8 mx-auto my-4 md:my-8 w-4/5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 gap-10">
 
                 {/* <!-- This is the data mapping starts--> */}
                 {defaultCities.map((cityWeather) => (
@@ -77,9 +78,9 @@ const Home = () => {
 
                             {/* <!-- This div element contains the name of the city and the date and time --> */}
                             <div className="flex flex-col justify-between h-full">
-                                <div className="flex flex-col text-center text-md font-bold text-gray-900" style={{ marginTop: "20px", marginRight: "42%", }}>
+                                <div className="flex flex-col text-center text-md font-bold text-gray-900 flexcol">
                                     <span className="uppercase">
-                                        {cityWeather.name}
+                                        {cityWeather.name}, {cityWeather.sys.country}
                                     </span>
                                     <span className="font-normal text-gray-700 text-sm">
                                         {new Date().toLocaleString("en-US", {
@@ -92,34 +93,25 @@ const Home = () => {
                                     </span>
                                 </div>
 
+
                                 {/* <!-- A container div that holds two smaller divs, one on the left and one on the right --> */}
                                 <div className="flex justify-between h-36">
-                                    <div className="flex flex-col justify-center items-center text-gray-700" style={{ marginLeft: "15%" }}>
-
-                                        {/* <!-- Weather icon --> */}
-                                        <div className="flex justify-center mt-2" >
-                                            <img
-                                                src={`//openweathermap.org/img/wn/${cityWeather.weather[0].icon}.png`}
-                                                alt="weather icon"
-                                                className="w-16 h-16"
-                                            />
-                                        </div>
-                                        {/* 
-                                        <!-- Weather description --> */}
-                                        <div className="text-center mt-2" style={{
-                                            color: "white",
-                                            fontSize: "20px"
-                                        }}>{cityWeather.weather[0].description}</div>
+                                    <div className="flex items-center mt-2 white-text">
+                                        <img
+                                            src={`//openweathermap.org/img/wn/${cityWeather.weather[0].icon}.png`}
+                                            alt="weather icon"
+                                            className="w-16 h-16 mr-2"
+                                        />
+                                        <div>{cityWeather.weather[0].description}</div>
                                     </div>
 
+
                                     {/* <!-- Right div that contains temperature information --> */}
-                                    <div className="flex flex-col justify-center items-center text-gray-700" style={{
-                                        marginRight: "15%", color: "white", marginBottom: "10%"
-                                    }}>
+                                    <div className="flex flex-col justify-center items-center text-gray-700 mr-25">
+
+
                                         {/* <!-- Current temperature --> */}
-                                        <div className="text-4xl font-bold" style={{
-                                            fontSize: "44px"
-                                        }}>{cityWeather.main.temp.toFixed(1)}&deg;C</div>
+                                        <div className="text-4xl font-bold font-w">{cityWeather.main.temp.toFixed(1)}&deg;C</div>
 
                                         {/* <!-- Temperature range --> */}
                                         <div className="text-xs" style={{
@@ -135,23 +127,18 @@ const Home = () => {
 
                                 {/* // The weather information is dynamically generated using the cityWeather object. */}
 
-                                <div style={{ backgroundColor: "hsl(228deg 11.81% 24.9%)", borderBottomLeftRadius: "3px", borderBottomRightRadius: "3px", marginBottom: "13px" }}>
+                                <div className='bottom'>
                                     <div className="flex justify-between h-20 items-center mt-5">
-                                        <div className="text-gray-700 text-xs flex flex-col" style={{
-                                            color: "white",
-                                            marginLeft: "5%"
-                                        }}>
+                                        <div className="text-gray-700 text-xs flex flex-col bottom-left">
                                             <div className="mb-1">Pressure: {cityWeather.main.pressure} hPa</div>
                                             <div className="mb-1">Humidity: {cityWeather.main.humidity}%</div>
                                             <div>Visibility: {cityWeather.visibility / 1000} km</div>
                                         </div>
                                         <div className="border-l-2 border-white h-8"></div>
                                         <div className="flex items-center">
-                                            <div className="text-lg font-bold mr-2" style={{
-                                                color: "white"
-                                            }}>
-                                                <div style={{ display: "flex", justifyContent: "center", marginBottom: "5%" }}>
-                                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" style={{ transform: "rotate(45deg)", display: "flex", justifyContent: "center" }}>
+                                            <div className="text-lg font-bold mr-2 font">
+                                                <div className='bottom-middle'>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white bottom-middle-cenetr" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
                                                     </svg>
                                                 </div>
@@ -161,16 +148,10 @@ const Home = () => {
 
                                         {/* // It also includes information about wind speed and direction, as well as the sunrise and sunset times for the city. */}
                                         <div className="border-l-2 border-white h-8"></div>
-                                        <div className="text-gray-700 text-xs flex flex-col" style={{
-                                            color: "white",
-                                            marginRight: "5%",
-                                        }}>
+                                        <div className="text-gray-700 text-xs flex flex-col bottom-right">
                                             <div className="mb-1">Sunrise: {new Date(cityWeather.sys.sunrise * 1000).toLocaleTimeString()}</div>
                                             <div>Sunset: {new Date(cityWeather.sys.sunset * 1000).toLocaleTimeString()}</div>
                                         </div>
-                                        <div style={{
-                                            backgroundColor: "hsl(228deg 11.81% 24.9%)"
-                                        }}></div>
                                     </div>
                                 </div>
                             </div></Link>
@@ -180,7 +161,8 @@ const Home = () => {
                 {/* mapping end here */}
 
             </div>
-        </>
+
+            </div>
     );
 };
 export default Home;
