@@ -7,6 +7,28 @@ HTML {
     background-image: url('./4122410.jpg');
 }
 
+.xcol {
+    display: flex;
+    align-items: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.xcol img {
+    height: 50px;
+    margin-right: 10px;
+    opacity: 0.9;
+    border-radius: 19px;
+    margin-bottom: 19%;
+}
+
+.icon-font {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 19%;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -94,78 +116,123 @@ Styling for the card element on hover */
     border-bottom-right-radius: 4px;
 }
 
-/* Media queries for screens with max width of 767px */
-@media screen and (max-width: 767px) {
 
-    /* / Styles for flex container with direction of column and content that is evenly spaced along the main axis */
-    .flex {
+/* Media Query for screens up to 768px */
+@media only screen and (max-width: 768px) {
+    .xcol {
         flex-direction: column;
-    }
-
-    /* Styles for flex container with direction of column and a fixed height */
-    .flex.justify-between.h-36 {
-        height: auto;
-    }
-
-    /* Styles for child div elements of a flex container with direction of column and a fixed height */
-    .flex.justify-between.h-36>div {
-        width: 100%;
-        margin: 0;
         text-align: center;
+        margin-bottom: 16px;
     }
 
-    /* Styles for a horizontal border with white color, 2 pixels in width and a top placement */
-    .border-l-2 {
-        border-top: 2px solid white;
-        margin: 5% 0;
+    .xcol img {
+        margin-right: 0;
+        margin-bottom: 0;
     }
 
-    /* Styles for flex container with direction of column, fixed height and evenly spaced content along the main axis and the cross axis */
-    .flex.justify-between.h-20.items-center {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* Styles for a horizontal border with white color, 2 pixels in width and a height of 8 pixels */
-    .border-l-2.border-white.h-8 {
-        display: none;
-    }
-
-    /* Styles for gray-colored text with small font size and a vertical flex container */
-    .text-gray-700.text-xs.flex.flex-col {
-        margin: 1px;
-        text-align: center;
-    }
-
-    /* Styles for text with large font size and bold weight */
-    .text-lg.font-bold.mr-2 {
-        margin-top: 10px;
-        text-align: center;
-    }
-
-    /* Styles for an SVG element with white color and a height and width of 6 pixels */
-    svg.h-6.w-6.text-white {
-        margin: 0 auto;
+    .icon-font {
+        margin-bottom: 16px;
     }
 
     .container {
-        padding: 0 1rem;
+        margin-top: 5%;
     }
 
-    .search-container {
+    .card {
+        width: 100%;
+    }
+
+    .card-content {
         flex-direction: column;
+        align-items: flex-start;
     }
 
-    .search-input {
-        width: 100%;
-        margin-bottom: 10px;
+    .card-title {
+        font-size: 18px;
+        margin-bottom: 4px;
     }
 
-    .search-btn {
-        width: 100%;
+    .card-temperature {
+        margin-top: 4px;
+        margin-bottom: 8px;
     }
 }
 
+/* Media Query for screens above 768px */
+@media only screen and (min-width: 768px) {
+    .xcol {
+        margin-bottom: 0;
+    }
+
+    .icon-font {
+        margin-right: 32px;
+    }
+
+    .container {
+        margin-top: 10%;
+    }
+
+    .card {
+        width: 400px;
+    }
+
+    .card-content {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .card-title {
+        font-size: 24px;
+        margin-right: 16px;
+    }
+}
+
+@media only screen and (min-width: 1275px) {
+    .xcol img {
+        height: 40px;
+        margin-right: 10px;
+        opacity: 0.9;
+        border-radius: 19px;
+        margin-bottom: 12%;
+    }
+
+    .icon-font {
+        font-size: 25px;
+        font-weight: 700;
+        margin-bottom: 12%;
+    }
+
+    .container {
+        margin-top: 5%;
+    }
+
+    .card {
+        padding: 10px;
+        margin-bottom: 12px;
+    }
+
+    .card-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-bottom {
+        padding: 8px;
+    }
+
+    .card-title {
+        font-size: 18px;
+    }
+
+    .card-description {
+        font-size: 12px;
+    }
+
+    .card-temperature {
+        font-size: 14px;
+    }
+}
 
 .flexcol {
     margin-top: 20px;
@@ -287,4 +354,91 @@ Styling for the card element on hover */
     transform: rotate(45deg);
     display: flex;
     justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .flexcol {
+        margin-top: 10px;
+        margin-right: 10%;
+    }
+
+    .white-text {
+        font-size: 16px;
+    }
+
+    .mr-25 {
+        margin-right: 10%;
+        margin-bottom: 8%;
+    }
+
+    .font-w {
+        font-size: 36px;
+    }
+
+    .bottom {
+        margin-bottom: 10px;
+    }
+
+    .bottom-left {
+        margin-left: 3%;
+    }
+
+    .bottom-middle {
+        margin-bottom: 3%;
+    }
+
+    .bottom-middle-cenetr {
+        margin-left: 10%;
+    }
+
+    .bottom-right {
+        margin-right: 3%;
+    }
+
+    .third-contrainer {
+        padding-top: 5px;
+    }
+
+    .fifth-contrainer {
+        font-size: 20px;
+    }
+
+    .icon-description {
+        margin-left: 10%;
+    }
+
+    .description {
+        font-size: 20px;
+    }
+
+    .line-divider {
+        margin-top: 3%;
+    }
+
+    .Right-side-section {
+        font-size: 20px;
+    }
+
+    .bottom-left-sub {
+        margin-left: 10%;
+    }
+
+    .bottom-middle-sub {
+        margin-left: 5%;
+    }
+}
+
+.footer {
+    background-color: #30333d;
+    color: #fff;
+    padding: 10px 10px 30px 10px;
+    margin-bottom: 20px;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 1px;
+    margin: 0 auto;
 }
