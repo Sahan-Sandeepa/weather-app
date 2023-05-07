@@ -8,7 +8,7 @@ import Footer from '../utils/Footer';
 const Home = () => {
     const [defaultCities, setDefaultCities] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
-
+   
     // Fetching weather data for default cities using Promise.all() function to fetch data for multiple cities asynchronously.
     useEffect(() => {
         const fetchData = async () => {
@@ -56,9 +56,8 @@ const Home = () => {
                     <div
                         className="transition duration-500 ease-in-out transform rounded-lg hover:scale-105 cursor-pointer border flex flex-col text-center p-6 relative"
                         key={cityWeather.id}
-                        style={{ padding: "10px 0px 0px 0px", backgroundColor: `${colors[index]} `}}
+                        style={{ padding: "10px 0px 0px 0px", backgroundColor: `${colors[index]} ` }}
                     >
-
                         {/* <!-- This button element allows removing of city data --> */}
                         <button
                             className="absolute top-0 right-0 p-2 text-gray-600 hover:text-gray-900"
@@ -84,7 +83,7 @@ const Home = () => {
 
                             {/* <!-- This div element contains the name of the city and the date and time --> */}
                             <div className="flex flex-col justify-between h-full">
-                                <div className="flex flex-col text-center text-md font-bold text-gray-900 flexcol">
+                                <div className="flex flex-col text-center text-md font-bold text-gray-900 flexcol ">
                                     <span className="uppercase">
                                         {cityWeather.name}, {cityWeather.sys.country}
                                     </span>
@@ -99,6 +98,7 @@ const Home = () => {
                                     </span>
                                 </div>
 
+                         
 
                                 {/* <!-- A container div that holds two smaller divs, one on the left and one on the right --> */}
                                 <div className="flex justify-between h-36">
