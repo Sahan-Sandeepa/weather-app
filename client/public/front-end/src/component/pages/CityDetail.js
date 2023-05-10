@@ -148,7 +148,13 @@ const CityDetail = () => {
                 </div>
                 
             </div>
-            <Footer />
+            <footer className="footer">
+                <div className="footer__content">
+                    2023 Fidenz Technologies
+
+
+                </div>
+            </footer>
         </div>
     );
 };

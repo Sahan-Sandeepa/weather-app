@@ -160,7 +160,7 @@ Styling for the card element on hover */
 }
 
 /* Media Query for screens above 768px */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 500px) {
     .xcol {
         margin-bottom: 0;
     }
@@ -188,7 +188,7 @@ Styling for the card element on hover */
     }
 }
 
-@media only screen and (min-width: 1275px) {
+@media only screen and (min-width: 500px) {
     .xcol img {
         height: 40px;
         margin-right: 10px;
@@ -358,7 +358,7 @@ Styling for the card element on hover */
     justify-content: center;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 500px) {
     .flexcol {
         margin-top: 10px;
         margin-right: 10%;
@@ -428,6 +428,7 @@ Styling for the card element on hover */
     .bottom-middle-sub {
         margin-left: 5%;
     }
+
 }
 
 .footer {
@@ -446,4 +447,14 @@ Styling for the card element on hover */
 
 .footer-component {
     margin-top: 43.2%;
+}
+
+@media only screen and (min-width: 500px) {
+    .footer__content {
+        flex-wrap: wrap;
+    }
+
+    .footer-component {
+        margin-top: 950px;
+    }
 }
