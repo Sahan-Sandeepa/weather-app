@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getQueryWeatherData, getCityCodes } from '../../api/Api';
+import { getQueryWeatherData, getUniqueCityCodes } from '../../api/Api';
 import { Link } from 'react-router-dom';
 import SearchBar from './../utils/SearchBar'
 import cloudIcon from '../assets/cloudIcon.jpg';
@@ -8,41 +8,27 @@ import Footer from '../utils/Footer';
 const Home = () => {
     const [defaultCities, setDefaultCities] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
-   
+
     // Fetching weather data for default cities using Promise.all() function to fetch data for multiple cities asynchronously.
     useEffect(() => {
-
-        const Data = getCityCodes;
         const fetchData = async () => {
-            const citiesWeatherData = await Promise.all([
-                getQueryWeatherData("1248991"),
-                getQueryWeatherData("1850147"),
-                getQueryWeatherData("2644210"),
-                getQueryWeatherData("2988507"),
-                getQueryWeatherData("2147714"),
-                getQueryWeatherData("4930956"),
-                getQueryWeatherData("1796236"),
-                getQueryWeatherData("3143244"),
-            ]);
-            // Setting the fetched weather data to the state variable `defaultCities`.
+            const cityCodes = getUniqueCityCodes();
+            const citiesWeatherData = await Promise.all(
+                cityCodes.map(cityCode => getQueryWeatherData(cityCode))
+            );
             setDefaultCities(citiesWeatherData);
         };
         // Calling the fetchData() function only once on component mount using useEffect hook with an empty dependency array.
         fetchData();
     }, []);
 
+
     const removeCityWeatherData = (name) => {
         // Filtering out the city weather data object from the `defaultCities` array whose name matches with the provided `name`.
         setDefaultCities(defaultCities.filter((city) => city.name !== name));
     };
     // Country codes object containing countries and their codes.
-    const countryCodes = {
-        "Sri Lanka": "SL",
-        "Japan": "JP",
-        "Great Britain": "GB",
-        "Australia": "AU",
-        "United State": "US"
-    };
+    
     const colors = ["hsl(210.51deg 78.48% 56.27%)", "hsl(153.05deg 47.97% 48.24%)", "hsl(0deg 45.79% 41.96%)", "hsl(29.17deg 68.57% 58.82%)", "hsl(304.51deg 45.79% 41.96%)", "hsl(251.45deg 56.22% 54.31%)", "hsl(85.19deg 45.79% 41.96%)", "hsl(36deg 2.11% 46.47%)"];
     return (
         <><div className="container">
@@ -101,7 +87,7 @@ const Home = () => {
                                     </span>
                                 </div>
 
-                         
+
 
                                 {/* <!-- A container div that holds two smaller divs, one on the left and one on the right --> */}
                                 <div className="flex justify-between h-36">
@@ -162,14 +148,17 @@ const Home = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </div></Link>
+                            </div>
+                        </Link>
                     </div>
                 ))}
 
                 {/* mapping end here */}
 
             </div>
-        </div><Footer /></>
+        </div>
+            <Footer />
+        </>
     );
 };
 export default Home;
