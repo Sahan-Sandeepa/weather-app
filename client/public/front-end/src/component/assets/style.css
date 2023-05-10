@@ -358,6 +358,7 @@ Styling for the card element on hover */
     justify-content: center;
 }
 
+
 @media only screen and (max-width: 500px) {
     .flexcol {
         margin-top: 10px;
@@ -455,6 +456,6 @@ Styling for the card element on hover */
     }
 
     .footer-component {
-        margin-top: 950px;
+        margin-top: 999px;
     }
 }

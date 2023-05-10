@@ -42,7 +42,7 @@ const CityDetail = () => {
                     <img src={cloudIcon} alt="Cloud Icon" />
                     <div className="icon-font">Weather App</div>
                 </div>
-    
+
                 <div className="transition duration-500 ease-in-out transform rounded-lg cursor-default bg-color hover:scale-105 cursor-pointer">
                     <div className='third-contrainer'>
                         <div className="flex justify-between items-center mb-4 forth-contrainer">
@@ -144,15 +144,11 @@ const CityDetail = () => {
                             </div>
                         </div>
                     </div>
-
                 </div>
-                
             </div>
             <footer className="footer">
                 <div className="footer__content">
                     2023 Fidenz Technologies
-
-
                 </div>
             </footer>
         </div>

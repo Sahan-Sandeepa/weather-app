@@ -6,22 +6,22 @@ function App() {
   return (
     // Initialize the routing functionality using BrowserRouter
     <BrowserRouter>
-  {/* // Define the main body of the web page */}
-      <body>
-    {/* // Define the main content area of the web page */}
-        <main>
-      {/* // Define the routes for the web page using the Routes component */}
-          <Routes>
+      {/* // Define the main body of the web page */}
 
-        {/* // Define the route for the Home page using the Home component */}
-            <Route path="/" element={<Home />} />
+      {/* // Define the main content area of the web page */}
+      <main>
+        {/* // Define the routes for the web page using the Routes component */}
+        <Routes>
 
-        {/* // Define the route for the CityDetail page using the CityDetail component */}
-            <Route path='/:cityId' element={<CityDetail />} />
+          {/* // Define the route for the Home page using the Home component */}
+          <Route path="/" element={<Home />} />
 
-          </Routes>
-        </main>
-      </body>
+          {/* // Define the route for the CityDetail page using the CityDetail component */}
+          <Route path='/:cityId' element={<CityDetail />} />
+
+        </Routes>
+      </main>
+
     </BrowserRouter>
 
   );
