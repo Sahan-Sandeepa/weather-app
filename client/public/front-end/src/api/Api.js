@@ -1,6 +1,26 @@
 const API_KEY = 'ece374adf9391a60faad37cf41257d52';
+
+export const getCityCodes = () => {
+
+    const cityData = {
+        "List": [{ "CityCode": "1248991", "CityName": "Colombo", "Temp": "33.0", "Status": "Clouds" },
+        { "CityCode": "1850147", "CityName": "Tokyo", "Temp": "8.6", "Status": "Clear" },
+        { "CityCode": "2644210", "CityName": "Liverpool", "Temp": "16.5", "Status": "Rain" },
+        { "CityCode": "2988507", "CityName": "Paris", "Temp": "22.4", "Status": "Clear" },
+        { "CityCode": "2147714", "CityName": "Sydney", "Temp": "27.3", "Status": "Rain" },
+        { "CityCode": "4930956", "CityName": "Boston", "Temp": "4.2", "Status": "Mist" },
+        { "CityCode": "1796236", "CityName": "Shanghai", "Temp": "10.1", "Status": "Clouds" },
+        { "CityCode": "3143244", "CityName": "Oslo", "Temp": "-3.9", "Status": "Clear" }]
+    };
+
+    const cityCodes = cityData.List.map(city => city.CityCode);
+    return cityCodes;
+};
+
+// Example usage// ['1248991', '1850147', '2644210', '2988507', '2147714', '4930956', '1796236', '3143244']
+
 // Function to get weather data for a city
-export const getQueryWeatherData = async (cityCode)  => {
+export const getQueryWeatherData = async (cityCode) => {
     // Check if data is in cache and not expired
     const cachedData = getCachedData(cityCode);
     if (cachedData && !isCacheExpired(cachedData.timestamp)) {
