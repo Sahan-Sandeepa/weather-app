@@ -9,11 +9,12 @@ const Home = () => {
     const [defaultCities, setDefaultCities] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
 
-    // Fetching weather data for default cities using Promise.all() function to fetch data for multiple cities asynchronously.
+    // Fetching weather data for default cities using Promise.all() function to fetch data for multiple cities asynchronously(promise resolution and data fetching).
     useEffect(() => {
         const fetchData = async () => {
             const cityCodes = getUniqueCityCodes();
             const citiesWeatherData = await Promise.all(
+                // wait for a Promise and get its fulfillment value
                 cityCodes.map(cityCode => getQueryWeatherData(cityCode))
             );
             setDefaultCities(citiesWeatherData);
