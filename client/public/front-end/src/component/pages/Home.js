@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getQueryWeatherData } from '../../api/Api';
+import { getQueryWeatherData, getCityCodes } from '../../api/Api';
 import { Link } from 'react-router-dom';
 import SearchBar from './../utils/SearchBar'
 import cloudIcon from '../assets/cloudIcon.jpg';
@@ -11,15 +11,18 @@ const Home = () => {
    
     // Fetching weather data for default cities using Promise.all() function to fetch data for multiple cities asynchronously.
     useEffect(() => {
+
+        const Data = getCityCodes;
         const fetchData = async () => {
             const citiesWeatherData = await Promise.all([
-                getQueryWeatherData('1850147'),
-                getQueryWeatherData('2644210'),
-                getQueryWeatherData('2988507'),
-                getQueryWeatherData('2147714'),
-                getQueryWeatherData('4930956'),
-                getQueryWeatherData('1796236'),
-                getQueryWeatherData('3143244'),
+                getQueryWeatherData("1248991"),
+                getQueryWeatherData("1850147"),
+                getQueryWeatherData("2644210"),
+                getQueryWeatherData("2988507"),
+                getQueryWeatherData("2147714"),
+                getQueryWeatherData("4930956"),
+                getQueryWeatherData("1796236"),
+                getQueryWeatherData("3143244"),
             ]);
             // Setting the fetched weather data to the state variable `defaultCities`.
             setDefaultCities(citiesWeatherData);
@@ -40,7 +43,7 @@ const Home = () => {
         "Australia": "AU",
         "United State": "US"
     };
-    const colors = ["hsl(210.51deg 78.48% 56.27%)", "hsl(153.05deg 47.97% 48.24%)", "hsl(0deg 45.79% 41.96%)", "hsl(29.17deg 68.57% 58.82%)", "hsl(304.51deg 45.79% 41.96%)", "hsl(251.45deg 56.22% 54.31%)", "hsl(85.19deg 45.79% 41.96%)"];
+    const colors = ["hsl(210.51deg 78.48% 56.27%)", "hsl(153.05deg 47.97% 48.24%)", "hsl(0deg 45.79% 41.96%)", "hsl(29.17deg 68.57% 58.82%)", "hsl(304.51deg 45.79% 41.96%)", "hsl(251.45deg 56.22% 54.31%)", "hsl(85.19deg 45.79% 41.96%)", "hsl(36deg 2.11% 46.47%)"];
     return (
         <><div className="container">
             <div className="xcol">
