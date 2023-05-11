@@ -261,9 +261,8 @@ Styling for the card element on hover */
 
 .bottom {
     background-color: hsl(228deg 11.81% 24.9%);
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-    margin-bottom: 13px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .bottom-left {
