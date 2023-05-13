@@ -50,6 +50,57 @@ HTML {
     box-shadow: 0 2px 8px #f0f1f2;
 }
 
+.weather-card {
+    padding: 10px 0px 0px 0px;
+    transition: all 0.5s ease-in-out;
+    transform: scale(1);
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.weather-card:hover {
+    transform: scale(1.05);
+}
+
+.weather-card:nth-child(1) {
+    background-color: hsl(210.51deg 78.48% 56.27%);
+}
+
+.weather-card:nth-child(2) {
+    background-color: hsl(153.05deg 47.97% 48.24%);
+}
+
+.weather-card:nth-child(3) {
+    background-color: hsl(0deg 45.79% 41.96%);
+}
+
+.weather-card:nth-child(4) {
+    background-color: hsl(29.17deg 68.57% 58.82%);
+}
+
+.weather-card:nth-child(5) {
+    background-color: hsl(304.51deg 45.79% 41.96%);
+}
+
+.weather-card:nth-child(6) {
+    background-color: hsl(251.45deg 56.22% 54.31%);
+}
+
+.weather-card:nth-child(7) {
+    background-color: hsl(85.19deg 45.79% 41.96%);
+}
+
+.weather-card:nth-child(8) {
+    background-color: hsl(36deg 2.11% 46.47%);
+}
+
+#temp {
+    margin-top: 22%;
+    padding: 20px;
+    width: 150px;
+}
+
 /* 
 Styling for the card element on hover */
 .card:hover {
@@ -159,7 +210,6 @@ Styling for the card element on hover */
     }
 }
 
-/* Media Query for screens above 768px */
 @media only screen and (min-width: 500px) {
     .xcol {
         margin-bottom: 0;
@@ -362,6 +412,12 @@ Styling for the card element on hover */
     .flexcol {
         margin-top: 10px;
         margin-right: 10%;
+    }
+
+    #temp {
+        margin-top: 10%;
+        padding: 10px;
+        width: 100px;
     }
 
     .white-text {
