@@ -17,15 +17,17 @@ function SearchBar(props) {
                 type="text"
                 placeholder="Enter a city"
                 onChange={handleInputChange}
-                className="border border-gray-300 rounded-l px-4 py-2 w-64 sm:w-80 md:w-96 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className=" border-gray-300 rounded-l px-4 py-2 w-64 sm:w-80 md:w-96 focus:outline-none focus:ring-2 focus:ring-blue-500 input-box"
             />
+
             <button
                 type="submit"
                 onClick={handleSearch}
-                className="bg-blue-500 hover:bg-blue-700 rounded-r text-white font-semibold px-4 py-2"
+                className="bg-purple-500 hover:bg-purple-800 rounded-r text-white font-semibold px-4 py-2"
             >
                 Add City
             </button>
+
         </form>
     );
 }
