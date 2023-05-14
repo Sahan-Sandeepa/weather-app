@@ -140,9 +140,9 @@ const Home = () => {
 
                                         {/* // It also includes information about wind speed and direction, as well as the sunrise and sunset times for the city. */}
                                         <div className="border-l-2 border-white h-8"></div>
-                                        <div className="text-gray-700 text-xs flex flex-col bottom-right">
-                                            <div className="mb-1">Sunrise: {new Date(cityWeather.sys.sunrise * 1000).toLocaleTimeString()}</div>
-                                            <div>Sunset: {new Date(cityWeather.sys.sunset * 1000).toLocaleTimeString()}</div>
+                                        <div className="text-gray-700 text-xs flex flex-col bottom-right-home">
+                                            <div className="mb-1">Sunrise: {new Date(cityWeather.sys.sunrise * 1000).toLocaleTimeString([], { hour: 'numeric', minute: 'numeric' })}</div>
+                                            <div >Sunset: {new Date(cityWeather.sys.sunset * 1000).toLocaleTimeString([], { hour: 'numeric', minute: 'numeric' })}</div>
                                         </div>
                                     </div>
                                 </div>
