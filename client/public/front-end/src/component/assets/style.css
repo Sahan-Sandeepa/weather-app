@@ -23,6 +23,20 @@ HTML {
     margin-bottom: 19%;
 }
 
+.header {
+    display: flex;
+    justify-content: center;
+    height: 0;
+}
+
+/* @media only screen and (max-width: 768px) {
+    .header {
+        height: auto;
+        flex-wrap: wrap;
+        padding: 1px;
+    }
+} */
+
 .icon-font {
     font-size: 30px;
     font-weight: 700;
@@ -182,6 +196,12 @@ Styling for the card element on hover */
         margin-bottom: 0;
     }
 
+    .header {
+        height: auto;
+        flex-wrap: wrap;
+        padding: 1px;
+    }
+
     .icon-font {
         margin-bottom: 16px;
     }
@@ -288,6 +308,27 @@ Styling for the card element on hover */
 .flexcol {
     margin-top: 20px;
     margin-right: 42%;
+}
+
+.my-element {
+    color: white;
+    margin-right: 15%;
+}
+
+.text-gray-700 {
+    color: #ffffff;
+}
+
+.text-xs {
+    font-size: 0.75rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.fl-col {
+    flex-direction: column;
 }
 
 .white-text {
@@ -408,83 +449,86 @@ Styling for the card element on hover */
 }
 
 
-@media only screen and (max-width: 500px) {
-    .flexcol {
-        margin-top: 10px;
-        margin-right: 10%;
+@media only screen and (max-width: 1067px) {
+    .mr-2-2 {
+        margin-left: 30px;
+        margin-right: 20px;
+        margin-bottom: 18%;
     }
 
-    #temp {
-        margin-top: 10%;
-        padding: 10px;
-        width: 100px;
+    .bottom-left-city {
+        margin-left: 0;
+        height: 110px;
     }
 
-    .white-text {
-        font-size: 16px;
+    .bottom-right-card {
+        margin-right: 0;
+        margin-left: 10px;
     }
 
-    .mr-25 {
-        margin-right: 10%;
-        margin-bottom: 8%;
+    .icon-description-card {
+        margin-left: 30px;
+        text-align: center;
+        margin-bottom: 7%;
     }
 
-    .font-w {
-        font-size: 36px;
-    }
-
-    .bottom {
+    .Right-side-section-card {
+        margin-right: 30px;
+        margin-top: 0%;
+        text-align: center;
         margin-bottom: 10px;
+        margin-top: 10px;
     }
 
-    .bottom-left {
-        margin-left: 3%;
+    .bottom-left-sub-card {
+        margin-left: 40px;
+        text-align: center;
+        margin-right: 30px;
+        margin-bottom: 10px;
+        color: #ffffff;
+        margin-top: 30px;
     }
 
-    .bottom-middle {
-        margin-bottom: 3%;
-    }
+    .bottom-middle-card {
+        margin-bottom: 1%;
+        margin-top: 1px;
 
-    .bottom-middle-cenetr {
-        margin-left: 10%;
-    }
-
-    .bottom-right {
-        margin-right: 3%;
-    }
-
-    .third-contrainer {
-        padding-top: 5px;
-    }
-
-    .fifth-contrainer {
-        font-size: 20px;
-    }
-
-    .icon-description {
-        margin-left: 10%;
-    }
-
-    .description {
-        font-size: 20px;
-    }
-
-    .line-divider {
-        margin-top: 3%;
-    }
-
-    .Right-side-section {
-        font-size: 20px;
-    }
-
-    .bottom-left-sub {
-        margin-left: 10%;
     }
 
     .bottom-middle-sub {
-        margin-left: 5%;
+        transform: rotate(10);
     }
 
+    .bottom-right-card {
+        margin-left: 30px;
+        margin-bottom: 12px;
+        margin-top: 5px;
+        margin-right: 0%;
+    }
+
+    .bottom-right-card-sunrise {
+        margin-left: 30px;
+        margin-bottom: 6px;
+        margin-top: 40px;
+        margin-right: 0%;
+    }
+
+    .border-l-2 {
+        border-left: 2px solid white;
+    }
+
+    .h-8 {
+        height: 30px;
+    }
+
+    .Degree-card {
+        height: 60px;
+    }
+
+    .bottom-crd {
+        height: 300%;
+        margin-bottom: 0px;
+    }
 }
 
 .footer {

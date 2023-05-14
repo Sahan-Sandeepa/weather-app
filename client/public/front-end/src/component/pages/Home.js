@@ -41,10 +41,9 @@ const Home = () => {
                 {/* <!-- This is the data mapping starts--> */}
                 {defaultCities.map((cityWeather, index) => (
                     <div
+                        // nth-child selector to apply different background colors to each card based on its position in the parent container.
                         className={`weather-card ${index === 0}`}
                         key={cityWeather.id}
-                        style={{}}
-                    // style={{ padding: "10px 0px 0px 0px", backgroundColor: `${colors[index]} ` }}
                     >
                         {/* <!-- This button element allows removing of city data --> */}
                         <button
@@ -72,7 +71,7 @@ const Home = () => {
                             {/* <!-- This div element contains the name of the city and the date and time --> */}
                             <div className="flex flex-col justify-between h-full">
                                 <div className="flex flex-col text-center text-md font-bold text-gray-900 flexcol ">
-                                    <span className="uppercase">
+                                    <span className="uppercase text-gray-700">
                                         {cityWeather.name}, {cityWeather.sys.country}
                                     </span>
                                     <span className="font-normal text-gray-700 text-sm">
@@ -85,8 +84,6 @@ const Home = () => {
                                         })}
                                     </span>
                                 </div>
-
-
 
                                 {/* <!-- A container div that holds two smaller divs, one on the left and one on the right --> */}
                                 <div className="flex justify-between h-36">
