@@ -15,6 +15,7 @@ body {
     background-color: rgb(30 32 39);
     opacity: 1;
 }
+
 .xcol {
     display: flex;
     align-items: center;
@@ -74,10 +75,9 @@ body {
 }
 
 .weather-card {
-    padding: 10px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
     transition: all 0.5s ease-in-out;
     transform: scale(1);
-    border: 1px solid #e5e7eb;
     border-radius: 0.5rem;
     cursor: pointer;
 }
@@ -90,11 +90,11 @@ body {
     background-color: hsl(210.51deg 78.48% 56.27%);
 }
 
-.weather-card:nth-child(2) {
+.weather-card:nth-child(3) {
     background-color: hsl(153.05deg 47.97% 48.24%);
 }
 
-.weather-card:nth-child(3) {
+.weather-card:nth-child(5) {
     background-color: hsl(0deg 45.79% 41.96%);
 }
 
@@ -102,12 +102,12 @@ body {
     background-color: hsl(29.17deg 68.57% 58.82%);
 }
 
-.weather-card:nth-child(5) {
+.weather-card:nth-child(6) {
     background-color: hsl(304.51deg 45.79% 41.96%);
 }
 
-.weather-card:nth-child(6) {
-    background-color: hsl(251.45deg 56.22% 54.31%);
+.weather-card:nth-child(2) {
+    background-color: rgb(98 73 204);
 }
 
 .weather-card:nth-child(7) {
@@ -128,6 +128,10 @@ body {
 Styling for the card element on hover */
 .card:hover {
     box-shadow: 0 4px 16px #d9d9d9;
+}
+
+.border-l-2 {
+    border-left: 2px solid #515566;
 }
 
 /* Styling for the selected card element */
@@ -314,6 +318,10 @@ Styling for the card element on hover */
     }
 }
 
+.input-box {
+    background-color: rgb(31, 33, 40);
+}
+
 .flexcol {
     margin-top: 20px;
     margin-right: 42%;
@@ -457,6 +465,10 @@ Styling for the card element on hover */
     justify-content: center;
 }
 
+.third-contrainer {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
 
 @media only screen and (max-width: 1067px) {
     .mr-2-2 {
