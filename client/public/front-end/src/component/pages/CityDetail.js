@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { getQueryWeatherData } from '../../api-call/Api';
 import '../assets/style.css';
-import cloudIcon from '../assets/cloudIcon.jpg';
+import cloudIcon from '../assets/wather-icon.png';
 import Footer from '../common/Footer';
 
 const CityDetail = () => {

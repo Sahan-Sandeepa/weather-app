@@ -3,10 +3,18 @@
 @tailwind components;
 @tailwind utilities;
 
-HTML {
+/* HTML {
     background-image: url('./4122410.jpg');
+} */
+body {
+    background-image: url('./header_Img.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% auto;
+    background-color: rgb(30 32 39);
+    opacity: 1;
 }
-
 .xcol {
     display: flex;
     align-items: center;
@@ -39,8 +47,9 @@ HTML {
 
 .icon-font {
     font-size: 30px;
-    font-weight: 700;
-    margin-bottom: 19%;
+    font-weight: 700px;
+    margin-bottom: 30px;
+    color: #ffffff;
 }
 
 .container {
@@ -543,9 +552,17 @@ Styling for the card element on hover */
     width: 100%;
     height: 10px;
     margin: 0 auto;
+    font-style: normal;
+    line-height: normal;
+    opacity: 0.5;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 36.03px;
+    text-align: center;
 }
 
-.footer-component {
+*/ .footer-component {
     margin-top: 43.2%;
 }
 

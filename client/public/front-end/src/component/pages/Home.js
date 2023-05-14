@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { getQueryWeatherData, getUniqueCityCodes } from '../../api-call/Api';
 import { Link } from 'react-router-dom';
 import SearchBar from '../common/SearchBar'
-import cloudIcon from '../assets/cloudIcon.jpg';
+import watherIcon from '../assets/wather-icon.png';
 import Footer from '../common/Footer';
 import '../assets/style.css'
 
@@ -35,7 +35,7 @@ const Home = () => {
     return (
         <><div className="container">
             <div className="xcol">
-                <img src={cloudIcon} alt="Cloud Icon" />
+                <img src={watherIcon} alt="Cloud Icon" />
                 <div className="icon-font">Weather App</div>
             </div>
             <SearchBar />
