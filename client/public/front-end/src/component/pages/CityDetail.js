@@ -33,6 +33,7 @@ const CityDetail = () => {
                 </div>
 
                 <div className="transition duration-500 ease-in-out transform rounded-lg cursor-default bg-color hover:scale-105 cursor-pointer bottom-crd">
+
                     <div className='third-contrainer'>
                         <div className="flex justify-between items-center mb-4 forth-contrainer">
                             <div className="text-gray-900 font-bold text-md fifth-contrainer">
@@ -89,7 +90,7 @@ const CityDetail = () => {
                             <div className="flex flex-col justify-center items-center text-gray-700 Right-side-section-card Right-side-section">
 
                                 {/* Current temperature */}
-                                <div className="text-4xl font-bold">{cityWeather.main.temp.toFixed(1)}&deg;C</div>
+                                <div className="text-4xl font-bold h-14">{cityWeather.main.temp.toFixed(1)}&deg;C</div>
 
                                 {/* Temperature range */}
                                 <div className="text-xs">
@@ -128,8 +129,8 @@ const CityDetail = () => {
                             <div className="my-element text-gray-700 text-xs flex fl-col">
 
                                 {/* displays wind speed and direction, and sunrise/sunset times */}
-                                <div className="mb-1 bottom-right-card-sunrise">Sunrise: {new Date(cityWeather.sys.sunrise * 1000).toLocaleTimeString()}</div>
-                                <div className="bottom-right bottom-right-card">Sunset: {new Date(cityWeather.sys.sunset * 1000).toLocaleTimeString()}</div>
+                                <div className="mb-1 bottom-right-card-sunrise">Sunrise: {new Date(cityWeather.sys.sunrise * 1000).toLocaleTimeString([], { hour: 'numeric', minute: 'numeric' })}</div>
+                                <div className="bottom-right bottom-right-card">Sunset: {new Date(cityWeather.sys.sunset * 1000).toLocaleTimeString([], { hour: 'numeric', minute: 'numeric' })}</div>
                             </div>
                         </div>
                     </div>
