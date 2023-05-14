@@ -391,7 +391,11 @@ Styling for the card element on hover */
 }
 
 .bottom-right {
-    color: white;
+    color: rgb(255, 255, 255);
+}
+
+.bottom-right-home {
+    color: rgb(255, 255, 255);
     margin-right: 5%;
 }
 
@@ -574,7 +578,7 @@ Styling for the card element on hover */
     text-align: center;
 }
 
-*/ .footer-component {
+.footer-component {
     margin-top: 43.2%;
 }
 
