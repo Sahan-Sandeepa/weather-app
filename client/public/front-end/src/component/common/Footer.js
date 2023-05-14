@@ -5,9 +5,7 @@ function Footer() {
     return (
         <footer className="footer">
             <div className="footer__content">
-                2023 Fidenz Technologies
-                
-                
+                2023 Fidenz Technologies                
             </div>
         </footer>
     );

@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import { getQueryWeatherData, getUniqueCityCodes } from '../../api/Api';
+import { getQueryWeatherData, getUniqueCityCodes } from '../../api-call/Api';
 import { Link } from 'react-router-dom';
-import SearchBar from './../utils/SearchBar'
+import SearchBar from '../common/SearchBar'
 import cloudIcon from '../assets/cloudIcon.jpg';
-import Footer from '../utils/Footer';
+import Footer from '../common/Footer';
 import '../assets/style.css'
 
 const Home = () => {
@@ -28,7 +28,10 @@ const Home = () => {
         // Filtering out the city weather data object from the `defaultCities` array whose name matches with the provided `name`.
         setDefaultCities(defaultCities.filter((city) => city.name !== name));
     };
-    // Country codes object containing countries and their codes.
+
+    if (!defaultCities) {
+        return <div>Loading...</div>;
+    }
     return (
         <><div className="container">
             <div className="xcol">
@@ -105,7 +108,7 @@ const Home = () => {
 
                                         {/* <!-- Temperature range --> */}
                                         <div className="text-xs" id='temp'>
-                                            <br/>
+                                            <br />
                                             Temp Min: {cityWeather.main.temp_min.toFixed(1)}&deg;C <br />
                                             Temp Max: {cityWeather.main.temp_max.toFixed(1)}&deg;C
                                         </div>

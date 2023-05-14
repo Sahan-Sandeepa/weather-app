@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { getQueryWeatherData } from '../../api/Api';
+import { getQueryWeatherData } from '../../api-call/Api';
 import '../assets/style.css';
 import cloudIcon from '../assets/cloudIcon.jpg';
-import Footer from '../utils/Footer';
+import Footer from '../common/Footer';
 
 const CityDetail = () => {
 
@@ -24,17 +24,6 @@ const CityDetail = () => {
         return <div>Loading...</div>;
     }
 
-    const countryCodes = {
-        "Sri Lanka": "SL",
-        "Japan": "JP",
-        "Great Britain": "GB",
-        "Australia": "AU",
-        "United State": "US"
-    };
-
-    const city = cityWeather.name;
-    const country = cityWeather.sys.country;
-    const countryCode = countryCodes[country] || country;
     return (
         <div className='footer-component'>
             <div className="transition duration-500 ease-in-out transform cursor-default flex flex-col text-center p-6 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2/3">
@@ -49,7 +38,7 @@ const CityDetail = () => {
                             <div className="text-gray-900 font-bold text-md fifth-contrainer">
                                 {/* A button that takes the user back to the home page. */}
                                 <div className="absolute top-4 left-4 cursor-pointer">
-                                    <Link to={"/"} key={city}>
+                                    <Link to={"/"} key={cityWeather.name}>
                                         <button className="absolute top-0 left-0 p-2" >
                                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-black" fill="none" viewBox="0 0 20 20" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -59,7 +48,7 @@ const CityDetail = () => {
                                 </div>
 
                                 {/* Displays the name of the city and the country code. */}
-                                {city}, {countryCode}
+                                {cityWeather.name}, {cityWeather.sys.country}
                             </div>
 
                             {/* Displays the current time, and the current month and day. */}
@@ -146,11 +135,7 @@ const CityDetail = () => {
                     </div>
                 </div>
             </div>
-            <footer className="footer">
-                <div className="footer__content">
-                    2023 Fidenz Technologies
-                </div>
-            </footer>
+            <Footer />
         </div>
     );
 };
