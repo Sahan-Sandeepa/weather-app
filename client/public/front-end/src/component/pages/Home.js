@@ -50,7 +50,7 @@ const Home = () => {
                     >
                         {/* <!-- This button element allows removing of city data --> */}
                         <button
-                            className="absolute top-0 right-0 p-2 text-gray-600 hover:text-gray-900"
+                            className="absolute top-0 right-0 p-2 text-gray-600 hover:text-gray-900 text-gray-700"
                             onClick={() => removeCityWeatherData(cityWeather.name)}
                         >
                             <svg
@@ -126,7 +126,7 @@ const Home = () => {
                                             <div className="mb-1">Humidity: {cityWeather.main.humidity}%</div>
                                             <div>Visibility: {cityWeather.visibility / 1000} km</div>
                                         </div>
-                                        <div className="border-l-2 border-white h-8"></div>
+                                        <div className="border-l-2 h-8"></div>
                                         <div className="flex items-center">
                                             <div className="text-lg font-bold mr-2 font">
                                                 <div className='bottom-middle'>

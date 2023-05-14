@@ -40,7 +40,7 @@ const CityDetail = () => {
                                 <div className="absolute top-4 left-4 cursor-pointer">
                                     <Link to={"/"} key={cityWeather.name}>
                                         <button className="absolute top-0 left-0 p-2" >
-                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-black" fill="none" viewBox="0 0 20 20" stroke="currentColor">
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white hover:text-gray-900" fill="none" viewBox="0 0 20 20" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                                             </svg>
                                         </button>
