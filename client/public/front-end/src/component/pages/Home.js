@@ -72,7 +72,7 @@ const Home = () => {
                         <Link to={`/${cityWeather.id}`}>
 
                             {/* <!-- This div element contains the name of the city and the date and time --> */}
-                            <div className="flex flex-col justify-between h-full">
+                            <div className="flex flex-col justify-between h-full card-bg">
                                 <div className="flex flex-col text-center text-md font-bold text-gray-900 flexcol ">
                                     <span className="uppercase text-gray-700">
                                         {cityWeather.name}, {cityWeather.sys.country}
