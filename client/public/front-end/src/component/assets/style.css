@@ -147,6 +147,12 @@ Styling for the card element on hover */
     border-left: 2px solid #515566;
 }
 
+.subcrd-line-devider {
+    border: 1px solid #87bbf0;
+    height: 50%;
+    margin-left: 10%;
+}
+
 /* Styling for the selected card element */
 .card.selected {
     border: 1px solid #0c78dc;
@@ -357,6 +363,12 @@ Styling for the card element on hover */
     display: flex;
 }
 
+.card-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .fl-col {
     flex-direction: column;
 }
@@ -365,6 +377,7 @@ Styling for the card element on hover */
     color: white;
     font-size: 20px;
     margin-left: 15%;
+    text-transform: capitalize;
 }
 
 .mr-25 {
@@ -460,6 +473,11 @@ Styling for the card element on hover */
 
 .icon-description {
     margin-left: 25%;
+    text-transform: capitalize;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 36.09px;
+    margin-bottom: 4%;
 }
 
 .description {
@@ -475,6 +493,8 @@ Styling for the card element on hover */
     margin-right: 25%;
     color: white;
     font-size: 24px;
+    margin-left: 6%;
+    
 }
 
 .bottom-left {
@@ -489,6 +509,7 @@ Styling for the card element on hover */
     display: inline;
     font-weight: bolder;
     letter-spacing: normal;
+
 }
 
 .contryName-font {
@@ -499,11 +520,13 @@ Styling for the card element on hover */
     letter-spacing: normal;
     line-height: normal;
     text-align: center;
+    margin-top: 4%;
 }
 
 .bottom-left-sub {
     color: white;
-    margin-left: 15%;
+    margin-left: 6%;
+
 }
 
 .bottom-middle {
@@ -521,6 +544,20 @@ Styling for the card element on hover */
 .third-contrainer {
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
+}
+
+.bottom-left-sub-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.bottom-left-sub-card div {
+    margin-bottom: 0.5rem;
+}
+
+.font-style {
+    font-weight: bold;
 }
 
 @media only screen and (max-width: 1067px) {
