@@ -60,14 +60,14 @@ const CityDetail = () => {
                                     hour: 'numeric',
                                     minute: 'numeric',
                                     hour12: true,
-                                }).toLowerCase() }, {new Date().toLocaleString('en-US', {
+                                }).toLowerCase()}, {new Date().toLocaleString('en-US', {
                                     month: 'short',
                                     day: 'numeric',
                                 })}
                             </div>
                         </div>
 
-                        <div className="card-flex justify-between h-48">
+                        <div className="card-flex justify-between h-48 middle-card">
                             <div className="flex flex-col justify-center items-center text-gray-700 icon-description icon-description-card">
 
                                 {/* Weather icon */}
@@ -95,6 +95,7 @@ const CityDetail = () => {
                                 {/* Temperature range */}
                                 <div className="text-xs" id='temp'>
                                     Temp Min: {cityWeather.main.temp_min.toFixed(1)}&deg;c
+                                    <br/>
                                     Temp Max: {cityWeather.main.temp_max.toFixed(1)}&deg;c
                                 </div>
                             </div>
@@ -121,7 +122,7 @@ const CityDetail = () => {
                                         <svg className="h-6 w-6 text-white bottom-middle-cenetr" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         </svg>
                                     </div>
-                                    <div className='font'> {cityWeather.wind.speed.toFixed(1)} m/s 120 Degree </div>
+                                    <div> <div className='bottom-middle-content font'>{cityWeather.wind.speed.toFixed(1)} m/s</div> 120 Degree </div>
                                 </div>
                             </div>
                             <div className="border-l-2 border-white h-16"></div>
