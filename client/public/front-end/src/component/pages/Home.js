@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
-import { getQueryWeatherData, getUniqueCityCodes } from '../../api/Api';
+import { getQueryWeatherData, getUniqueCityCodes } from '../../api-call/Api';
 import { Link } from 'react-router-dom';
-import SearchBar from './../utils/SearchBar'
-import cloudIcon from '../assets/cloudIcon.jpg';
-import Footer from '../utils/Footer';
+import SearchBar from '../common/SearchBar'
+import watherIcon from '../assets/wather-icon.png';
+import Footer from '../common/Footer';
+import '../assets/style.css'
 
 const Home = () => {
     const [defaultCities, setDefaultCities] = useState([]);
-    const [searchTerm, setSearchTerm] = useState('');
 
     // Fetching weather data for default cities using Promise.all() function to fetch data for multiple cities asynchronously(promise resolution and data fetching).
     useEffect(() => {
@@ -28,29 +28,29 @@ const Home = () => {
         // Filtering out the city weather data object from the `defaultCities` array whose name matches with the provided `name`.
         setDefaultCities(defaultCities.filter((city) => city.name !== name));
     };
-    // Country codes object containing countries and their codes.
-    
-    const colors = ["hsl(210.51deg 78.48% 56.27%)", "hsl(153.05deg 47.97% 48.24%)", "hsl(0deg 45.79% 41.96%)", "hsl(29.17deg 68.57% 58.82%)", "hsl(304.51deg 45.79% 41.96%)", "hsl(251.45deg 56.22% 54.31%)", "hsl(85.19deg 45.79% 41.96%)", "hsl(36deg 2.11% 46.47%)"];
+
+    if (!defaultCities) {
+        return <div>Loading...</div>;
+    }
     return (
         <><div className="container">
             <div className="xcol">
-                <img src={cloudIcon} alt="Cloud Icon" />
+                <img src={watherIcon} alt="Cloud Icon" />
                 <div className="icon-font">Weather App</div>
             </div>
             <SearchBar />
 
             <div className="mt-8 mx-auto my-4 md:my-8 w-4/5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 gap-10">
-
                 {/* <!-- This is the data mapping starts--> */}
                 {defaultCities.map((cityWeather, index) => (
                     <div
-                        className="transition duration-500 ease-in-out transform rounded-lg hover:scale-105 cursor-pointer border flex flex-col text-center p-6 relative"
+                        // nth-child selector to apply different background colors to each card based on its position in the parent container.
+                        className={`weather-card ${index === 0}`}
                         key={cityWeather.id}
-                        style={{ padding: "10px 0px 0px 0px", backgroundColor: `${colors[index]} ` }}
                     >
                         {/* <!-- This button element allows removing of city data --> */}
                         <button
-                            className="absolute top-0 right-0 p-2 text-gray-600 hover:text-gray-900"
+                            className="absolute top-0 right-0 p-2 text-gray-600 hover:text-gray-900 text-gray-700"
                             onClick={() => removeCityWeatherData(cityWeather.name)}
                         >
                             <svg
@@ -74,7 +74,7 @@ const Home = () => {
                             {/* <!-- This div element contains the name of the city and the date and time --> */}
                             <div className="flex flex-col justify-between h-full">
                                 <div className="flex flex-col text-center text-md font-bold text-gray-900 flexcol ">
-                                    <span className="uppercase">
+                                    <span className="uppercase text-gray-700">
                                         {cityWeather.name}, {cityWeather.sys.country}
                                     </span>
                                     <span className="font-normal text-gray-700 text-sm">
@@ -87,8 +87,6 @@ const Home = () => {
                                         })}
                                     </span>
                                 </div>
-
-
 
                                 {/* <!-- A container div that holds two smaller divs, one on the left and one on the right --> */}
                                 <div className="flex justify-between h-36">
@@ -109,9 +107,8 @@ const Home = () => {
                                         <div className="text-4xl font-bold font-w">{cityWeather.main.temp.toFixed(1)}&deg;C</div>
 
                                         {/* <!-- Temperature range --> */}
-                                        <div className="text-xs" style={{
-                                            marginTop: "65%"
-                                        }}>
+                                        <div className="text-xs" id='temp'>
+                                            <br />
                                             Temp Min: {cityWeather.main.temp_min.toFixed(1)}&deg;C <br />
                                             Temp Max: {cityWeather.main.temp_max.toFixed(1)}&deg;C
                                         </div>
@@ -129,7 +126,7 @@ const Home = () => {
                                             <div className="mb-1">Humidity: {cityWeather.main.humidity}%</div>
                                             <div>Visibility: {cityWeather.visibility / 1000} km</div>
                                         </div>
-                                        <div className="border-l-2 border-white h-8"></div>
+                                        <div className="border-l-2 h-8"></div>
                                         <div className="flex items-center">
                                             <div className="text-lg font-bold mr-2 font">
                                                 <div className='bottom-middle'>
@@ -143,9 +140,9 @@ const Home = () => {
 
                                         {/* // It also includes information about wind speed and direction, as well as the sunrise and sunset times for the city. */}
                                         <div className="border-l-2 border-white h-8"></div>
-                                        <div className="text-gray-700 text-xs flex flex-col bottom-right">
-                                            <div className="mb-1">Sunrise: {new Date(cityWeather.sys.sunrise * 1000).toLocaleTimeString()}</div>
-                                            <div>Sunset: {new Date(cityWeather.sys.sunset * 1000).toLocaleTimeString()}</div>
+                                        <div className="text-gray-700 text-xs flex flex-col bottom-right-home">
+                                            <div className="mb-1">Sunrise: {new Date(cityWeather.sys.sunrise * 1000).toLocaleTimeString([], { hour: 'numeric', minute: 'numeric' })}</div>
+                                            <div >Sunset: {new Date(cityWeather.sys.sunset * 1000).toLocaleTimeString([], { hour: 'numeric', minute: 'numeric' })}</div>
                                         </div>
                                     </div>
                                 </div>

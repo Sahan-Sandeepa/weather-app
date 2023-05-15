@@ -1,5 +1,7 @@
 const data = require('./city.json');
-const API_KEY = 'ece374adf9391a60faad37cf41257d52';
+//get api key from the env file
+const API_KEY = process.env.REACT_APP_API_KEY;
+console.log(API_KEY)
 
 const cityCodes = data.List.map(city => city.CityCode);
 

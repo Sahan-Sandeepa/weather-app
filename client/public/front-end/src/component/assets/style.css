@@ -3,8 +3,17 @@
 @tailwind components;
 @tailwind utilities;
 
-HTML {
+/* HTML {
     background-image: url('./4122410.jpg');
+} */
+body {
+    background-image: url('./header_Img.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% auto;
+    background-color: rgb(30 32 39);
+    opacity: 1;
 }
 
 .xcol {
@@ -23,10 +32,25 @@ HTML {
     margin-bottom: 19%;
 }
 
+.header {
+    display: flex;
+    justify-content: center;
+    height: 0;
+}
+
+/* @media only screen and (max-width: 768px) {
+    .header {
+        height: auto;
+        flex-wrap: wrap;
+        padding: 1px;
+    }
+} */
+
 .icon-font {
     font-size: 30px;
-    font-weight: 700;
-    margin-bottom: 19%;
+    font-weight: 700px;
+    margin-bottom: 30px;
+    color: #ffffff;
 }
 
 .container {
@@ -50,10 +74,64 @@ HTML {
     box-shadow: 0 2px 8px #f0f1f2;
 }
 
+.weather-card {
+    padding: 0px 0px 0px 0px;
+    transition: all 0.5s ease-in-out;
+    transform: scale(1);
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.weather-card:hover {
+    transform: scale(1.05);
+}
+
+.weather-card:nth-child(1) {
+    background-color: hsl(210.51deg 78.48% 56.27%);
+}
+
+.weather-card:nth-child(3) {
+    background-color: hsl(153.05deg 47.97% 48.24%);
+}
+
+.weather-card:nth-child(5) {
+    background-color: hsl(0deg 45.79% 41.96%);
+}
+
+.weather-card:nth-child(4) {
+    background-color: hsl(29.17deg 68.57% 58.82%);
+}
+
+.weather-card:nth-child(6) {
+    background-color: hsl(304.51deg 45.79% 41.96%);
+}
+
+.weather-card:nth-child(2) {
+    background-color: rgb(98 73 204);
+}
+
+.weather-card:nth-child(7) {
+    background-color: hsl(85.19deg 45.79% 41.96%);
+}
+
+.weather-card:nth-child(8) {
+    background-color: hsl(36deg 2.11% 46.47%);
+}
+
+#temp {
+    margin-top: 22%;
+    padding: 20px;
+    width: 150px;
+}
+
 /* 
 Styling for the card element on hover */
 .card:hover {
     box-shadow: 0 4px 16px #d9d9d9;
+}
+
+.border-l-2 {
+    border-left: 2px solid #515566;
 }
 
 /* Styling for the selected card element */
@@ -131,6 +209,12 @@ Styling for the card element on hover */
         margin-bottom: 0;
     }
 
+    .header {
+        height: auto;
+        flex-wrap: wrap;
+        padding: 1px;
+    }
+
     .icon-font {
         margin-bottom: 16px;
     }
@@ -159,7 +243,6 @@ Styling for the card element on hover */
     }
 }
 
-/* Media Query for screens above 768px */
 @media only screen and (min-width: 500px) {
     .xcol {
         margin-bottom: 0;
@@ -235,9 +318,34 @@ Styling for the card element on hover */
     }
 }
 
+.input-box {
+    background-color: rgb(31, 33, 40);
+}
+
 .flexcol {
     margin-top: 20px;
     margin-right: 42%;
+}
+
+.my-element {
+    color: white;
+    margin-right: 15%;
+}
+
+.text-gray-700 {
+    color: #ffffff;
+}
+
+.text-xs {
+    font-size: 0.75rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.fl-col {
+    flex-direction: column;
 }
 
 .white-text {
@@ -283,7 +391,11 @@ Styling for the card element on hover */
 }
 
 .bottom-right {
-    color: white;
+    color: rgb(255, 255, 255);
+}
+
+.bottom-right-home {
+    color: rgb(255, 255, 255);
     margin-right: 5%;
 }
 
@@ -357,78 +469,91 @@ Styling for the card element on hover */
     justify-content: center;
 }
 
+.third-contrainer {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
 
-@media only screen and (max-width: 500px) {
-    .flexcol {
-        margin-top: 10px;
-        margin-right: 10%;
+@media only screen and (max-width: 1067px) {
+    .mr-2-2 {
+        margin-left: 30px;
+        margin-right: 20px;
+        margin-bottom: 18%;
     }
 
-    .white-text {
-        font-size: 16px;
+    .bottom-left-city {
+        margin-left: 0;
+        height: 110px;
     }
 
-    .mr-25 {
-        margin-right: 10%;
-        margin-bottom: 8%;
+    .bottom-right-card {
+        margin-right: 0;
+        margin-left: 10px;
     }
 
-    .font-w {
-        font-size: 36px;
+    .icon-description-card {
+        margin-left: 30px;
+        text-align: center;
+        margin-bottom: 7%;
     }
 
-    .bottom {
+    .Right-side-section-card {
+        margin-right: 30px;
+        margin-top: 0%;
+        text-align: center;
         margin-bottom: 10px;
+        margin-top: 10px;
     }
 
-    .bottom-left {
-        margin-left: 3%;
+    .bottom-left-sub-card {
+        margin-left: 40px;
+        text-align: center;
+        margin-right: 30px;
+        margin-bottom: 10px;
+        color: #ffffff;
+        margin-top: 30px;
     }
 
-    .bottom-middle {
-        margin-bottom: 3%;
-    }
+    .bottom-middle-card {
+        margin-bottom: 1%;
+        margin-top: 1px;
 
-    .bottom-middle-cenetr {
-        margin-left: 10%;
-    }
-
-    .bottom-right {
-        margin-right: 3%;
-    }
-
-    .third-contrainer {
-        padding-top: 5px;
-    }
-
-    .fifth-contrainer {
-        font-size: 20px;
-    }
-
-    .icon-description {
-        margin-left: 10%;
-    }
-
-    .description {
-        font-size: 20px;
-    }
-
-    .line-divider {
-        margin-top: 3%;
-    }
-
-    .Right-side-section {
-        font-size: 20px;
-    }
-
-    .bottom-left-sub {
-        margin-left: 10%;
     }
 
     .bottom-middle-sub {
-        margin-left: 5%;
+        transform: rotate(10);
     }
 
+    .bottom-right-card {
+        margin-left: 30px;
+        margin-bottom: 12px;
+        margin-top: 5px;
+        margin-right: 0%;
+    }
+
+    .bottom-right-card-sunrise {
+        margin-left: 30px;
+        margin-bottom: 6px;
+        margin-top: 40px;
+        margin-right: 0%;
+    }
+
+    .border-l-2 {
+        border-left: 2px solid white;
+    }
+
+    .h-8 {
+        height: 30px;
+    }
+
+    .Degree-card {
+        height: 60px;
+    }
+
+    .bottom-crd {
+        height: 300%;
+        margin-bottom: 0px;
+    }
 }
 
 .footer {
@@ -443,6 +568,14 @@ Styling for the card element on hover */
     width: 100%;
     height: 10px;
     margin: 0 auto;
+    font-style: normal;
+    line-height: normal;
+    opacity: 0.5;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 36.03px;
+    text-align: center;
 }
 
 .footer-component {
