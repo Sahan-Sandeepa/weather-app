@@ -82,6 +82,14 @@ body {
     cursor: pointer;
 }
 
+.card-bg {
+    background-image: url('./cloud_bg-card.png');
+    background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% auto;
+}
+
 .weather-card:hover {
     transform: scale(1.05);
 }
