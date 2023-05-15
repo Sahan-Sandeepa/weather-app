@@ -85,9 +85,9 @@ body {
 .card-bg {
     background-image: url('./cloud_bg-card.png');
     background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
 }
 
 .weather-card:hover {
@@ -127,9 +127,14 @@ body {
 }
 
 #temp {
-    margin-top: 22%;
-    padding: 20px;
+    margin-top: 8%;
+    padding: 15px;
     width: 150px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 24.02px;
+    text-align: center;
 }
 
 /* 
@@ -368,11 +373,25 @@ Styling for the card element on hover */
 }
 
 .font-w {
-    font-Size: 44px;
+    text-transform: lowercase;
+    width: 126px;
+    height: 48px;
+    font-size: 50px;
+    font-weight: 500;
 }
 
 .font {
-    color: white;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 33.63px;
+
+}
+
+.font-normal {
+    margin-top: 10px;
 }
 
 .bottom {
@@ -393,9 +412,14 @@ Styling for the card element on hover */
 }
 
 .bottom-middle-cenetr {
-    transform: rotate(45deg);
+    transform: rotate(4deg);
     display: flex;
     justify-content: center;
+    background-image: url('./Vector_Smart_Object.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
 }
 
 .bottom-right {
@@ -458,6 +482,23 @@ Styling for the card element on hover */
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
     margin-bottom: 13px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans - Bold', 'Helvetica Neue', sans-serif;
+}
+
+.font-style {
+    display: inline;
+    font-weight: bolder;
+    letter-spacing: normal;
+}
+
+.contryName-font {
+    font-family: "Open Sans";
+    font-size: 25px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: center;
 }
 
 .bottom-left-sub {
@@ -598,4 +639,11 @@ Styling for the card element on hover */
     .footer-component {
         margin-top: 999px;
     }
+}
+
+.search-bg {
+    /* Style for "Rectangle" */
+    /* Style for "Rectangle" */
+    border-radius: 8px;
+    background-color: #6c5dd3;
 }
