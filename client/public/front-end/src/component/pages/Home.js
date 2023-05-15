@@ -72,18 +72,19 @@ const Home = () => {
                         <Link to={`/${cityWeather.id}`}>
 
                             {/* <!-- This div element contains the name of the city and the date and time --> */}
-                            <div className="flex flex-col justify-between h-full">
-                                <div className="flex flex-col text-center text-md font-bold text-gray-900 flexcol ">
+                            <div className="flex flex-col justify-between h-full card-bg">
+                                <div className="flex flex-col text-center text-md font-bold text-gray-900 flexcol contryName-font">
                                     <span className="uppercase text-gray-700">
                                         {cityWeather.name}, {cityWeather.sys.country}
                                     </span>
                                     <span className="font-normal text-gray-700 text-sm">
-                                        {new Date().toLocaleString("en-US", {
-                                            hour: "numeric",
-                                            minute: "numeric",
+                                        {new Date().toLocaleTimeString('en-US', {
+                                            hour: 'numeric',
+                                            minute: 'numeric',
                                             hour12: true,
-                                            month: "short",
-                                            day: "numeric",
+                                        }).toLowerCase() }, {new Date().toLocaleString('en-US', {
+                                            month: 'short',
+                                            day: 'numeric',
                                         })}
                                     </span>
                                 </div>
@@ -122,16 +123,15 @@ const Home = () => {
                                 <div className='bottom'>
                                     <div className="flex justify-between h-20 items-center mt-5">
                                         <div className="text-gray-700 text-xs flex flex-col bottom-left">
-                                            <div className="mb-1">Pressure: {cityWeather.main.pressure} hPa</div>
-                                            <div className="mb-1">Humidity: {cityWeather.main.humidity}%</div>
-                                            <div>Visibility: {cityWeather.visibility / 1000} km</div>
+                                            <div className="mb-1"><div className='font-style'>Pressure: </div>{cityWeather.main.pressure} hPa</div>
+                                            <div className="mb-1"><div className='font-style'>Humidity: </div>{cityWeather.main.humidity}%</div>
+                                            <div><div className='font-style'>Visibility: </div>{cityWeather.visibility / 1000} km</div>
                                         </div>
-                                        <div className="border-l-2 h-8"></div>
+                                        <div className="border-l-2 h-8 border-l-2-main"></div>
                                         <div className="flex items-center">
                                             <div className="text-lg font-bold mr-2 font">
                                                 <div className='bottom-middle'>
-                                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white bottom-middle-cenetr" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                                                    <svg className="h-6 w-6 text-white bottom-middle-cenetr" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                     </svg>
                                                 </div>
                                                 {cityWeather.wind.speed.toFixed(1)} m/s 120 Degree
@@ -139,10 +139,10 @@ const Home = () => {
                                         </div>
 
                                         {/* // It also includes information about wind speed and direction, as well as the sunrise and sunset times for the city. */}
-                                        <div className="border-l-2 border-white h-8"></div>
+                                        <div className="border-l-2 border-l-2-main border-white h-8"></div>
                                         <div className="text-gray-700 text-xs flex flex-col bottom-right-home">
-                                            <div className="mb-1">Sunrise: {new Date(cityWeather.sys.sunrise * 1000).toLocaleTimeString([], { hour: 'numeric', minute: 'numeric' })}</div>
-                                            <div >Sunset: {new Date(cityWeather.sys.sunset * 1000).toLocaleTimeString([], { hour: 'numeric', minute: 'numeric' })}</div>
+                                            <div className="mb-1"><div className='font-style'>Sunrise: </div>{new Date(cityWeather.sys.sunrise * 1000).toLocaleTimeString([], { hour: 'numeric', minute: 'numeric' }).toLowerCase()}</div>
+                                            <div ><div className='font-style'>Sunset: </div>{new Date(cityWeather.sys.sunset * 1000).toLocaleTimeString([], { hour: 'numeric', minute: 'numeric' }).toLowerCase()}</div>
                                         </div>
                                     </div>
                                 </div>
