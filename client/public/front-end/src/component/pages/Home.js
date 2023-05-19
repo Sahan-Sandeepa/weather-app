@@ -23,7 +23,6 @@ const Home = () => {
         fetchData();
     }, []);
 
-
     const removeCityWeatherData = (name) => {
         // Filtering out the city weather data object from the `defaultCities` array whose name matches with the provided `name`.
         setDefaultCities(defaultCities.filter((city) => city.name !== name));
