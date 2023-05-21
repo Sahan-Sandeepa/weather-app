@@ -104,7 +104,7 @@ const Home = () => {
 
 
                                         {/* <!-- Current temperature --> */}
-                                        <div className="text-4xl font-bold font-w">{cityWeather.main.temp.toFixed(1)}&deg;C</div>
+                                        <div className="text-4xl font-bold font-w temp-main">{cityWeather.main.temp.toFixed(1)}&deg;C</div>
 
                                         {/* <!-- Temperature range --> */}
                                         <div className="text-xs" id='temp'>

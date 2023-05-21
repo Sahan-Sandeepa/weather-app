@@ -26,7 +26,7 @@ const CityDetail = () => {
 
     return (
         <div className='footer-component'>
-            <div className="transition duration-500 ease-in-out transform cursor-default flex flex-col text-center p-6 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2/3">
+            <div className="transition duration-500 ease-in-out transform cursor-default flex flex-col text-center p-6 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2/3 card-inside">
                 <div className="xcol header">
                     <img src={cloudIcon} alt="Cloud Icon" />
                     <div className="icon-font">Weather App</div>
@@ -105,7 +105,7 @@ const CityDetail = () => {
                     {/* // Displays pressure, humidity and visibility for a city */}
 
                     <div className='bottom-left-city bottom-left'>
-                        <div className="flex justify-between h-20 items-center mt-4">
+                        <div className="flex justify-between h-20 items-center mt-4 bottom-left-city-sub">
                             <div className="text-gray-700 text-xs flex flex-col bottom-left-sub-card bottom-left-sub">
 
                                 {/* // Displays pressure, humidity and visibility for a city */}

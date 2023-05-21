@@ -562,7 +562,7 @@ Styling for the card element on hover */
     font-weight: bold;
 }
 
-@media only screen and (max-width: 1067px) {
+/* @media only screen and (max-width: 1067px) {
     .mr-2-2 {
         margin-left: 30px;
         margin-right: 20px;
@@ -651,7 +651,8 @@ Styling for the card element on hover */
         border-left: 2px solid #515566;
         margin-top: 25%;
     }
-    .border-l-2-main{
+
+    .border-l-2-main {
         margin-top: 0%;
     }
 
@@ -663,10 +664,11 @@ Styling for the card element on hover */
         display: inline-block;
         white-space: nowrap;
     }
+
     .icon-font {
         margin-top: 20%;
     }
-}
+} */
 
 .footer {
     background-color: #30333d;
@@ -705,8 +707,305 @@ Styling for the card element on hover */
 }
 
 .search-bg {
-    /* Style for "Rectangle" */
-    /* Style for "Rectangle" */
+
     border-radius: 8px;
     background-color: #6c5dd3;
+}
+
+@media only screen and (max-width: 320px) {
+    .container {
+        padding: 10px;
+    }
+
+    .xcol {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .header{
+        display: inline;
+    }
+
+    .xcol img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .icon-font {
+        font-size: 16px;
+    }
+
+    .mt-8 {
+        margin-top: 8px;
+    }
+
+    /* class sets the width of an element to 100% (full width). */
+    .w-4\/5 {
+        width: 100%;
+    }
+
+    /* Sets the grid template columns to two columns screen sizes that meet the medium, large breakpoint. */
+
+    .grid-cols-1,
+    .md\:grid-cols-2,
+    .lg\:grid-cols-3,
+    .xl\:grid-cols-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .gap-10 {
+        gap: 10px;
+    }
+
+    .weather-card {
+        width: 100%;
+        margin-top: 10%;
+    }
+
+    .temp-main {
+        margin-top: 15%;
+    }
+
+    .text-gray-700,
+    .text-gray-900 {
+        text-align: center;
+    }
+
+    .card-bg {
+        padding: 10px;
+    }
+
+    .flexcol.contryName-font {
+        font-size: 12px;
+    }
+
+    .text-md {
+        font-size: 14px;
+    }
+
+    .contryName-font {
+        margin-right: 0px;
+    }
+
+    .uppercase.text-gray-700 {
+        font-size: 14px;
+    }
+
+    .text-gray-700.text-sm {
+        font-size: 10px;
+    }
+
+    .h-36 {
+        height: auto;
+    }
+
+    .white-text {
+        text-align: left;
+        display: inline;
+        margin-top: 10%;
+        justify-content: left;
+    }
+
+    .w-16.h-16 {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+    }
+
+    .text-4xl {
+        font-size: 24px;
+    }
+
+    .mr-25 {
+        margin-right: 0;
+    }
+
+    .text-xs #temp {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .bottom {
+        margin-top: 10px;
+        text-align: center;
+        height: 130px;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+    }
+
+    .text-lg.font-bold.font {
+        font-size: 16px;
+    }
+
+    .border-l-2.h-8.border-l-2-main {
+        margin-top: 10px;
+    }
+
+    .bottom-left,
+    .bottom-middle,
+    .bottom-right-home {
+        text-align: center;
+        padding: 7px 10px 0 10px;
+    }
+
+    .text-gray-700.text-xs.flex.flex-col.bottom-left {
+        font-size: 10px;
+        margin-top: 5px;
+    }
+
+    .text-lg.font-bold.mr-2.font {
+        font-size: 14px;
+    }
+
+    .border-l-2.border-l-2-main.border-white.h-8 {
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+
+    .font {
+        margin-left: 5px;
+    }
+
+    .text-gray-700.text-xs.flex.flex-col.bottom-right-home {
+        font-size: 10px;
+        margin-top: 5px;
+    }
+
+    /*search bar*/
+    .input-box {
+        width: 220%;
+    }
+
+    .search-bg {
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    /* card in detailed */
+
+    .card-inside {
+        width: auto;
+    }
+
+    .mr-2-2 {
+        margin-left: 30px;
+        margin-right: 20px;
+        margin-bottom: 18%;
+    }
+
+    .bottom-right-card {
+        margin-right: 0;
+        margin-left: 10px;
+    }
+
+    .icon-description-card {
+        margin-left: 0px;
+        text-align: center;
+        margin-bottom: 7%;
+    }
+
+    .Right-side-section-card {
+        margin-right: 30px;
+        margin-top: 0%;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .bottom-left-sub-card {
+        text-align: center;
+        margin-right: 30px;
+        margin-bottom: 10px;
+        color: #ffffff;
+        margin-top: 90px;
+    }
+
+    .bottom-left-sub {
+        margin-left: 3px;
+    }
+
+    .bottom-middle-card {
+        margin-bottom: 1%;
+        margin-top: 90px;
+    }
+
+    .bottom-middle-sub {
+        transform: rotate(10);
+    }
+
+    .bottom-right-card {
+        margin-left: 30px;
+        margin-bottom: 12px;
+        margin-top: 5px;
+        margin-right: 0%;
+    }
+
+    .bottom-right-card-sunrise {
+        margin-left: 30px;
+        margin-bottom: 6px;
+        margin-top: 90px;
+        margin-right: 0%;
+    }
+
+    .bottom-left-city {
+        display: block;
+        padding: 10px;
+        margin: 0%;
+    }
+
+    .bottom-left-city-sub {
+        margin-left: 0;
+    }
+
+    .middle-card {
+        display: inline;
+    }
+
+    .border-l-2 {
+        border-left: 2px solid white;
+    }
+
+    .h-8 {
+        height: 30px;
+    }
+
+    .Degree-card {
+        height: 60px;
+    }
+
+    .bottom-crd {
+        height: 590px;
+        margin-bottom: 0px;
+    }
+
+    .border-l-2 {
+        border-left: 2px solid #515566;
+        margin-top: 25%;
+    }
+
+    .border-l-2-main {
+        margin-top: 0%;
+    }
+
+    .subcrd-line-devider {
+        margin-right: 35.3px;
+    }
+
+    .bottom-middle-content {
+        display: inline-block;
+        white-space: nowrap;
+    }
+
+    .icon-font {
+        margin-top: 20%;
+    }
+
+    .footer__content {
+        flex-wrap: wrap;
+    }
+
+    .footer-component {
+        margin-top: 700px;
+    }
 }
