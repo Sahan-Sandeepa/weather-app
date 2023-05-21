@@ -39,7 +39,7 @@ const Home = () => {
             </div>
             <SearchBar />
 
-            <div className="mt-8 mx-auto my-4 md:my-8 w-4/3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 gap-10">
+            <div className="mt-8 mx-auto my-4 md:my-8 w-4/3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 gap-10 card-description">
                 {/* <!-- This is the data mapping starts--> */}
                 {defaultCities.map((cityWeather, index) => (
                     <div

@@ -6,6 +6,10 @@
 /* HTML {
     background-image: url('./4122410.jpg');
 } */
+* {
+    font-family: "Open Sans";
+}
+
 body {
     background-image: url('./header_Img.png');
     background-size: contain;
@@ -14,7 +18,6 @@ body {
     background-size: 100% auto;
     background-color: rgb(30 32 39);
     opacity: 1;
-    font-family: "Open Sans";
 }
 
 .xcol {
@@ -33,19 +36,18 @@ body {
     margin-bottom: 19%;
 }
 
+.temp-main {
+    width: 12px;
+    height: 48px;
+    font-size: 1px;
+    font-weight: 100px;
+}
+
 .header {
     display: flex;
     justify-content: center;
     height: 0;
 }
-
-/* @media only screen and (max-width: 768px) {
-    .header {
-        height: auto;
-        flex-wrap: wrap;
-        padding: 1px;
-    }
-} */
 
 .icon-font {
     font-size: 30px;
@@ -91,7 +93,7 @@ body {
 
 .home-font {
     font-family: "Open Sans";
-    font-size: 29px;
+    font-size: 24px;
     font-weight: 700;
     font-style: normal;
     letter-spacing: normal;
@@ -629,7 +631,7 @@ Styling for the card element on hover */
 
 @media only screen and (max-width: 320px) {
     .container {
-        padding: 10px;
+        margin-top: 5%;
     }
 
     .xcol {
@@ -670,12 +672,21 @@ Styling for the card element on hover */
     }
 
     .gap-10 {
-        gap: 10px;
+        gap: 1%;
+    }
+
+    .card {
+        padding: 10px;
     }
 
     .weather-card {
         width: 100%;
-        margin-top: 10%;
+        height: auto;
+        margin-top: 7%;
+    }
+
+    .middle-crd {
+        height: auto;
     }
 
     .temp-main {
@@ -689,6 +700,7 @@ Styling for the card element on hover */
 
     .card-bg {
         padding: 10px;
+        height: 100%;
     }
 
     .flexcol.contryName-font {
@@ -742,7 +754,7 @@ Styling for the card element on hover */
     }
 
     .bottom {
-        margin-top: 10px;
+        margin-top: 0px;
         text-align: center;
         height: 130px;
         border-top-left-radius: 7px;
@@ -780,6 +792,7 @@ Styling for the card element on hover */
 
     .font {
         margin-left: 5px;
+        margin-bottom: 10px;
     }
 
     .text-gray-700.text-xs.flex.flex-col.bottom-right-home {
@@ -790,11 +803,13 @@ Styling for the card element on hover */
     /*search bar*/
     .input-box {
         width: 220%;
+        margin-bottom: 10%;
     }
 
     .search-bg {
         width: 100%;
         margin-top: 8px;
+        margin-bottom: 10%;
     }
 
     /* card in detailed */
@@ -900,7 +915,9 @@ Styling for the card element on hover */
     }
 
     .border-l-2-main {
-        margin-top: 0%;
+        margin-top: 10%;
+        height: 90%;
+        margin: 0px 1px 0px 1px;
     }
 
     .subcrd-line-devider {
@@ -921,6 +938,10 @@ Styling for the card element on hover */
     }
 
     .footer-component {
-        margin-top: 700px;
+        margin-top: 999px;
+    }
+
+    .footer {
+        margin-top: 80%;
     }
 }
