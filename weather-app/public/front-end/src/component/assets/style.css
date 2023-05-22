@@ -771,7 +771,7 @@ Styling for the card element on hover */
     .bottom-middle,
     .bottom-right-home {
         text-align: center;
-        padding: 7px 10px 0 10px;
+        padding: auto 10px 0 10px;
     }
 
     .text-gray-700.text-xs.flex.flex-col.bottom-left {
