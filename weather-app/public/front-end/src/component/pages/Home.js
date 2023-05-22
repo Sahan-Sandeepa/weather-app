@@ -9,7 +9,7 @@ import '../assets/style.css'
 const Home = () => {
     const [defaultCities, setDefaultCities] = useState([]);
 
-    // Fetching weather data for default cities using Promise.all() function to fetch data for multiple cities asynchronously(promise resolution and data fetching).
+    // Fetching weather data for default cities using Promise.all().
     useEffect(() => {
         const fetchData = async () => {
             const cityCodes = getUniqueCityCodes();
@@ -19,7 +19,7 @@ const Home = () => {
             );
             setDefaultCities(citiesWeatherData);
         };
-        // Calling the fetchData() function only once on component mount using useEffect hook with an empty dependency array.
+        // Calling the fetchData()
         fetchData();
     }, []);
 
@@ -70,7 +70,6 @@ const Home = () => {
                         {/* <!-- This Link element directs to a page with more detailed city weather data --> */}
                         <Link to={`/${cityWeather.id}`}>
 
-                            {/* <!-- This div element contains the name of the city and the date and time --> */}
                             <div className="flex flex-col justify-between h-full card-bg">
                                 <div className="flex flex-col text-center text-md font-bold text-gray-900 flexcol contryName-font">
                                     <span className="uppercase text-gray-700 home-font">
@@ -88,7 +87,6 @@ const Home = () => {
                                     </span>
                                 </div>
 
-                                {/* <!-- A container div that holds two smaller divs, one on the left and one on the right --> */}
                                 <div className="flex justify-between h-36 middle-crd">
                                     <div className="flex items-center mt-2 white-text">
                                         <img
@@ -98,8 +96,6 @@ const Home = () => {
                                         <div>{cityWeather.weather[0].description}</div>
                                     </div>
 
-
-                                    {/* <!-- Right div that contains temperature information --> */}
                                     <div className="flex flex-col justify-center items-center text-gray-700 mr-25">
 
 
@@ -115,9 +111,7 @@ const Home = () => {
                                     </div>
                                 </div>
 
-                                {/* // This div contains weather information about the city, including pressure, humidity, and visibility. */}
-
-                                {/* // The weather information is dynamically generated using the cityWeather object. */}
+                                {/* This div contains weather information about the city, including pressure, humidity, and visibility. */}
 
                                 <div className='bottom'>
                                     <div className="flex justify-between h-20 items-center mt-5">
@@ -137,7 +131,7 @@ const Home = () => {
                                             </div>
                                         </div>
 
-                                        {/* // It also includes information about wind speed and direction, as well as the sunrise and sunset times for the city. */}
+                                        {/* It also includes information about wind speed and direction, as well as the sunrise and sunset times for the city. */}
                                         <div className="border-l-2 border-l-2-main border-white h-12"></div>
                                         <div className="text-gray-700 text-xs flex flex-col bottom-right-home">
                                             <div className="mb-1"><div className='font-style'>Sunrise: </div>{new Date(cityWeather.sys.sunrise * 1000).toLocaleTimeString([], { hour: 'numeric', minute: 'numeric' }).toLowerCase()}</div>
