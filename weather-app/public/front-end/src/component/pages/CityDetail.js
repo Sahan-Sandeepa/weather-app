@@ -7,7 +7,7 @@ import Footer from '../common/Footer';
 
 const CityDetail = () => {
 
-    // This code uses React hooks to fetch weather data for a city based on the city ID obtained from the URL parameter.
+    // fetch weather data for a city based on the city ID obtained from the URL parameter.
     const { cityId } = useParams();
     const [cityWeather, setCityWeather] = useState(null);
 
@@ -37,7 +37,7 @@ const CityDetail = () => {
                     <div className='third-contrainer'>
                         <div className="flex justify-between items-center mb-4 forth-contrainer">
                             <div className="text-gray-900 font-bold text-md fifth-contrainer contryName-font">
-                                {/* A button that takes the user back to the home page. */}
+                             
                                 <div className="absolute top-4 left-4 cursor-pointer">
                                     <Link to={"/"} key={cityWeather.name}>
                                         <button className="absolute top-0 left-0 p-2" >
@@ -53,7 +53,7 @@ const CityDetail = () => {
                             </div>
 
                             {/* Displays the current time, and the current month and day. */}
-                            {/* This div contains the time and date. */}
+
                             <div className="text-gray-700 text-sm font-normal date-time font-normal">
 
                                 {new Date().toLocaleTimeString('en-US', {
@@ -102,13 +102,11 @@ const CityDetail = () => {
                         </div>
                     </div>
 
-                    {/* // Displays pressure, humidity and visibility for a city */}
+                    {/* Displays pressure, humidity and visibility for a city */}
 
                     <div className='bottom-left-city bottom-left'>
                         <div className="flex justify-between h-20 items-center mt-4 bottom-left-city-sub">
                             <div className="text-gray-700 text-xs flex flex-col bottom-left-sub-card bottom-left-sub">
-
-                                {/* // Displays pressure, humidity and visibility for a city */}
                                 <div className="mb-1"><div className='font-style'>Pressure: </div>{cityWeather.main.pressure} hPa</div>
                                 <div className="mb-1"><div className='font-style'>Humidity: </div>{cityWeather.main.humidity}%</div>
                                 <div ><div className='font-style'>Visibility: </div>{cityWeather.visibility / 1000} km</div>
@@ -117,7 +115,6 @@ const CityDetail = () => {
                             <div className="flex items-center">
                                 <div className="text-lg font-bold mr-2 mr-2-2 text-gray-700">
 
-                                    {/* // Uses flexbox to position elements, and SVG for wind icon */}
                                     <div className='bottom-middle-card bottom-middle'>
                                         <svg className="h-6 w-6 text-white bottom-middle-cenetr" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         </svg>

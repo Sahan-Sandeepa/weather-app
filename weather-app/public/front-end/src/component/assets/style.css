@@ -3,9 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* HTML {
-    background-image: url('./4122410.jpg');
-} */
 * {
     font-family: "Open Sans";
 }
@@ -536,6 +533,7 @@ Styling for the card element on hover */
     display: inline;
     font-weight: bolder;
     letter-spacing: normal;
+    font-size: larger;
 
 }
 
