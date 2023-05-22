@@ -23,7 +23,6 @@ const Home = () => {
         fetchData();
     }, []);
 
-
     const removeCityWeatherData = (name) => {
         // Filtering out the city weather data object from the `defaultCities` array whose name matches with the provided `name`.
         setDefaultCities(defaultCities.filter((city) => city.name !== name));
@@ -40,7 +39,7 @@ const Home = () => {
             </div>
             <SearchBar />
 
-            <div className="mt-8 mx-auto my-4 md:my-8 w-4/5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 gap-10">
+            <div className="mt-8 mx-auto my-4 md:my-8 w-4/3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 gap-10 card-description">
                 {/* <!-- This is the data mapping starts--> */}
                 {defaultCities.map((cityWeather, index) => (
                     <div
@@ -74,7 +73,7 @@ const Home = () => {
                             {/* <!-- This div element contains the name of the city and the date and time --> */}
                             <div className="flex flex-col justify-between h-full card-bg">
                                 <div className="flex flex-col text-center text-md font-bold text-gray-900 flexcol contryName-font">
-                                    <span className="uppercase text-gray-700">
+                                    <span className="uppercase text-gray-700 home-font">
                                         {cityWeather.name}, {cityWeather.sys.country}
                                     </span>
                                     <span className="font-normal text-gray-700 text-sm">
@@ -82,7 +81,7 @@ const Home = () => {
                                             hour: 'numeric',
                                             minute: 'numeric',
                                             hour12: true,
-                                        }).toLowerCase() }, {new Date().toLocaleString('en-US', {
+                                        }).toLowerCase()}, {new Date().toLocaleString('en-US', {
                                             month: 'short',
                                             day: 'numeric',
                                         })}
@@ -90,7 +89,7 @@ const Home = () => {
                                 </div>
 
                                 {/* <!-- A container div that holds two smaller divs, one on the left and one on the right --> */}
-                                <div className="flex justify-between h-36">
+                                <div className="flex justify-between h-36 middle-crd">
                                     <div className="flex items-center mt-2 white-text">
                                         <img
                                             src={`//openweathermap.org/img/wn/${cityWeather.weather[0].icon}.png`}
@@ -105,7 +104,7 @@ const Home = () => {
 
 
                                         {/* <!-- Current temperature --> */}
-                                        <div className="text-4xl font-bold font-w">{cityWeather.main.temp.toFixed(1)}&deg;C</div>
+                                        <div className="text-4xl font-bold font-w temp-main">{cityWeather.main.temp.toFixed(1)}&deg;C</div>
 
                                         {/* <!-- Temperature range --> */}
                                         <div className="text-xs" id='temp'>
@@ -127,7 +126,7 @@ const Home = () => {
                                             <div className="mb-1"><div className='font-style'>Humidity: </div>{cityWeather.main.humidity}%</div>
                                             <div><div className='font-style'>Visibility: </div>{cityWeather.visibility / 1000} km</div>
                                         </div>
-                                        <div className="border-l-2 h-8 border-l-2-main"></div>
+                                        <div className="border-l-2 h-12 border-l-2-main"></div>
                                         <div className="flex items-center">
                                             <div className="text-lg font-bold mr-2 font">
                                                 <div className='bottom-middle'>
@@ -139,7 +138,7 @@ const Home = () => {
                                         </div>
 
                                         {/* // It also includes information about wind speed and direction, as well as the sunrise and sunset times for the city. */}
-                                        <div className="border-l-2 border-l-2-main border-white h-8"></div>
+                                        <div className="border-l-2 border-l-2-main border-white h-12"></div>
                                         <div className="text-gray-700 text-xs flex flex-col bottom-right-home">
                                             <div className="mb-1"><div className='font-style'>Sunrise: </div>{new Date(cityWeather.sys.sunrise * 1000).toLocaleTimeString([], { hour: 'numeric', minute: 'numeric' }).toLowerCase()}</div>
                                             <div ><div className='font-style'>Sunset: </div>{new Date(cityWeather.sys.sunset * 1000).toLocaleTimeString([], { hour: 'numeric', minute: 'numeric' }).toLowerCase()}</div>
