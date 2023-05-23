@@ -113,7 +113,7 @@ const Home = () => {
 
                                 {/* This div contains weather information about the city, including pressure, humidity, and visibility. */}
 
-                                <div className='bottom'>
+                                <div className='bottom bottom-768'>
                                     <div className="flex justify-between h-20 items-center mt-5">
                                         <div className="text-gray-700 text-xs flex flex-col bottom-left">
                                             <div className="mb-1"><div className='font-style'>Pressure: </div>{cityWeather.main.pressure} hPa</div>
