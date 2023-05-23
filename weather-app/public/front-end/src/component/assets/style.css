@@ -638,8 +638,13 @@ Styling for the card element on hover */
         margin-bottom: 10px;
     }
 
+    .card-description {
+        width: auto;
+    }
+
     .header {
         display: inline;
+        margin-top: 150px;
     }
 
     .xcol img {
@@ -671,6 +676,7 @@ Styling for the card element on hover */
 
     .gap-10 {
         gap: 1%;
+        margin: 10px;
     }
 
     .card {
@@ -678,7 +684,7 @@ Styling for the card element on hover */
     }
 
     .weather-card {
-        width: 100%;
+        width: max-content;
         height: auto;
         margin-top: 7%;
     }
@@ -689,6 +695,7 @@ Styling for the card element on hover */
 
     .temp-main {
         margin-top: 15%;
+        margin-right: 30px;
     }
 
     .text-gray-700,
@@ -721,8 +728,13 @@ Styling for the card element on hover */
         font-size: 10px;
     }
 
+    .third-contrainer {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
     .h-36 {
-        height: auto;
+        height: 150px;
     }
 
     .white-text {
@@ -754,7 +766,7 @@ Styling for the card element on hover */
     .bottom {
         margin-top: 0px;
         text-align: center;
-        height: 130px;
+        height: 1400px;
         border-top-left-radius: 7px;
         border-top-right-radius: 7px;
     }
@@ -766,12 +778,12 @@ Styling for the card element on hover */
     .border-l-2.h-8.border-l-2-main {
         margin-top: 10px;
     }
-
+    
     .bottom-left,
     .bottom-middle,
     .bottom-right-home {
         text-align: center;
-        padding: auto 10px 0 10px;
+        padding: auto 10px 0px 10px;
     }
 
     .text-gray-700.text-xs.flex.flex-col.bottom-left {
@@ -813,7 +825,7 @@ Styling for the card element on hover */
     /* card in detailed */
 
     .card-inside {
-        width: auto;
+        width: 400px;
     }
 
     .mr-2-2 {
@@ -851,6 +863,7 @@ Styling for the card element on hover */
 
     .bottom-left-sub {
         margin-left: 3px;
+        margin-right: 7px;
     }
 
     .bottom-middle-card {
@@ -863,17 +876,17 @@ Styling for the card element on hover */
     }
 
     .bottom-right-card {
-        margin-left: 30px;
+        margin-left: 3px;
         margin-bottom: 12px;
         margin-top: 5px;
         margin-right: 0%;
     }
 
     .bottom-right-card-sunrise {
-        margin-left: 30px;
+        margin-left: 15px;
         margin-bottom: 6px;
         margin-top: 90px;
-        margin-right: 0%;
+        margin-right: 7px;
     }
 
     .bottom-left-city {
@@ -883,7 +896,11 @@ Styling for the card element on hover */
     }
 
     .bottom-left-city-sub {
-        margin-left: 0;
+        margin: 0;
+    }
+
+    .font-w-card{
+        margin-right: 80px;
     }
 
     .middle-card {
@@ -903,7 +920,9 @@ Styling for the card element on hover */
     }
 
     .bottom-crd {
-        height: 590px;
+        height: 630px;
+        margin-right: 20px;
+        margin-left: 30px;
         margin-bottom: 0px;
     }
 
@@ -932,7 +951,7 @@ Styling for the card element on hover */
     }
 
     .footer__content {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
     }
 
     .footer-component {
@@ -941,5 +960,120 @@ Styling for the card element on hover */
 
     .footer {
         margin-top: 80%;
+    }
+}
+
+
+
+/* Styles for screens larger than 768px */
+@media only screen and (max-width: 768px) {
+    .container {
+        margin-top: 10%;
+    }
+
+    .flexcol {
+        margin-right: 166px;
+        margin-top: 20px;
+    }
+
+    .font {
+        font-size: 16px;
+    }
+
+    .gap-10 {
+        margin: 5px;
+    }
+
+    .bottom-left {
+        margin-left: 12px;
+        margin-top: 4px;
+    }
+
+    .bottom-middle-cenetr {
+        transform: rotate(4deg);
+    }
+
+    .Right-side-section {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .icon-description-card {
+        margin-left: 0;
+    }
+
+    body {
+        background-size: contain;
+    }
+
+    .xcol img {
+        height: 0px;
+        margin-bottom: 10%;
+    }
+
+    .temp-main {
+        width: 8px;
+        height: 40px;
+        font-size: 0.8rem;
+        font-weight: 200px;
+    }
+
+    #temp {
+        margin-left: 30px;
+        margin-bottom: 50px;
+    }
+
+    .icon-font {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .container {
+        margin-top: 5%;
+    }
+
+    .weather-card {
+        height: 350px;
+        width: auto;
+    }
+
+    .white-text {
+        margin-left: 25px;
+    }
+
+    .home-font {
+        font-size: 20px;
+    }
+
+    .font-w {
+        width: 90px;
+        margin-left: 70px;
+        margin-bottom: 20px;
+        height: 40px;
+        font-size: 40px;
+    }
+
+    .font {
+        font-size: 14px;
+    }
+
+    .bottom-middle {
+        margin-bottom: 3%;
+    }
+
+    .bottom-right-home {
+        margin-right: 3%;
+    }
+
+    .bottom-left-sub-card div {
+        margin-bottom: 0.3rem;
+    }
+
+    .footer__content {
+        flex-wrap: wrap;
+    }
+
+    .footer-component {
+        margin-top: 999px;
     }
 }

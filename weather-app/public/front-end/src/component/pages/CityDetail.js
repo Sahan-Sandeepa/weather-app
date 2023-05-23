@@ -90,7 +90,7 @@ const CityDetail = () => {
                             <div className="flex flex-col justify-center items-center text-gray-700 Right-side-section-card Right-side-section">
 
                                 {/* Current temperature */}
-                                <div className="text-4xl font-bold font-w">{cityWeather.main.temp.toFixed(1)}&deg;C</div>
+                                <div className="text-4xl font-bold font-w font-w-card">{cityWeather.main.temp.toFixed(1)}&deg;C</div>
 
                                 {/* Temperature range */}
                                 <div className="text-xs" id='temp'>
