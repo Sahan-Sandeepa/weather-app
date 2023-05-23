@@ -998,6 +998,10 @@ Styling for the card element on hover */
         margin-left: 0;
     }
 
+    .bottom-768 {
+        height: 110px;
+    }
+
     .icon-description-card {
         margin-left: 0;
     }
