@@ -1023,6 +1023,11 @@ Styling for the card element on hover */
         margin-bottom: 50px;
     }
 
+    .border-l-2-main {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
     .icon-font {
         font-size: 24px;
         margin-bottom: 20px;
