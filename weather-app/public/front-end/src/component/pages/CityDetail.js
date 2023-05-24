@@ -93,7 +93,7 @@ const CityDetail = () => {
                                 <div className="text-4xl font-bold font-w font-w-card">{cityWeather.main.temp.toFixed(1)}&deg;C</div>
 
                                 {/* Temperature range */}
-                                <div className="text-xs" id='temp'>
+                                <div className="text-xs temp-320" id='temp'>
                                     Temp Min: {cityWeather.main.temp_min.toFixed(1)}&deg;c
                                     <br/>
                                     Temp Max: {cityWeather.main.temp_max.toFixed(1)}&deg;c
@@ -123,7 +123,7 @@ const CityDetail = () => {
                                 </div>
                             </div>
                             <div className="border-l-2 border-white h-16"></div>
-                            <div className="my-element text-gray-700 text-xs flex fl-col">
+                            <div className="my-element text-gray-700 text-xs flex fl-col fl-col-768">
 
                                 {/* displays wind speed and direction, and sunrise/sunset times */}
                                 <div className="mb-1 bottom-right-card-sunrise"><div className='font-style'>Sunrise: </div>{new Date(cityWeather.sys.sunrise * 1000).toLocaleTimeString([], { hour: 'numeric', minute: 'numeric', hour12: true }).toLowerCase()}</div>
