@@ -695,7 +695,7 @@ Styling for the card element on hover */
 
     .temp-main {
         margin-top: 15%;
-        margin-right: 30px;
+        margin-right: 40px;
     }
 
     .text-gray-700,
@@ -704,8 +704,8 @@ Styling for the card element on hover */
     }
 
     .card-bg {
-        padding: 10px;
         height: 100%;
+        margin-bottom: 0;
     }
 
     .flexcol.contryName-font {
@@ -767,8 +767,6 @@ Styling for the card element on hover */
         margin-top: 0px;
         text-align: center;
         height: 1400px;
-        border-top-left-radius: 7px;
-        border-top-right-radius: 7px;
     }
 
     .text-lg.font-bold.font {
@@ -778,7 +776,7 @@ Styling for the card element on hover */
     .border-l-2.h-8.border-l-2-main {
         margin-top: 10px;
     }
-    
+
     .bottom-left,
     .bottom-middle,
     .bottom-right-home {
@@ -825,7 +823,7 @@ Styling for the card element on hover */
     /* card in detailed */
 
     .card-inside {
-        width: 400px;
+        width: 500px;
     }
 
     .mr-2-2 {
@@ -899,6 +897,12 @@ Styling for the card element on hover */
         margin: 0;
     }
 
+    .temp-320, #temp {
+        padding: 0;
+        margin: 0;
+        margin-right: 10px;
+    }
+
     .font-w-card{
         margin-right: 80px;
     }
@@ -920,10 +924,10 @@ Styling for the card element on hover */
     }
 
     .bottom-crd {
-        height: 630px;
-        margin-right: 20px;
-        margin-left: 30px;
+        height: 560px;
+        width: 300px;
         margin-bottom: 0px;
+        margin-left: 80px;
     }
 
     .border-l-2 {
@@ -935,6 +939,10 @@ Styling for the card element on hover */
         margin-top: 10%;
         height: 90%;
         margin: 0px 1px 0px 1px;
+    }
+
+    .third-contrainer {
+        margin: 0;
     }
 
     .subcrd-line-devider {
