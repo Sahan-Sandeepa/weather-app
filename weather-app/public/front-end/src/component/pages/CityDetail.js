@@ -113,13 +113,13 @@ const CityDetail = () => {
                             </div>
                             <div className="border-l-2 border-white h-16"></div>
                             <div className="flex items-center">
-                                <div className="text-lg font-bold mr-2 mr-2-2 text-gray-700">
+                                <div className="text-lg font-bold mr-2 mr-2-2 text-gray-700 font-768">
 
                                     <div className='bottom-middle-card bottom-middle'>
                                         <svg className="h-6 w-6 text-white bottom-middle-cenetr" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         </svg>
                                     </div>
-                                    <div> <div className='bottom-middle-content font'>{cityWeather.wind.speed.toFixed(1)} m/s</div> 120 Degree </div>
+                                    <div className='font-768'> <div className='bottom-middle-content font'>{cityWeather.wind.speed.toFixed(1)} m/s</div> 120 Degree </div>
                                 </div>
                             </div>
                             <div className="border-l-2 border-white h-16"></div>

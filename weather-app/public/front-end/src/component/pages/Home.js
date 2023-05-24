@@ -115,10 +115,10 @@ const Home = () => {
 
                                 <div className='bottom bottom-768'>
                                     <div className="flex justify-between h-20 items-center mt-5">
-                                        <div className="text-gray-700 text-xs flex flex-col bottom-left">
-                                            <div className="mb-1"><div className='font-style'>Pressure: </div>{cityWeather.main.pressure} hPa</div>
-                                            <div className="mb-1"><div className='font-style'>Humidity: </div>{cityWeather.main.humidity}%</div>
-                                            <div><div className='font-style'>Visibility: </div>{cityWeather.visibility / 1000} km</div>
+                                        <div className="text-gray-700 text-xs flex flex-col bottom-left bottom-left-768">
+                                            <div className="mb-1 font-style-768"><div className='font-style'>Pressure: </div>{cityWeather.main.pressure} hPa</div>
+                                            <div className="mb-1 font-style-768"><div className='font-style'>Humidity: </div>{cityWeather.main.humidity}%</div>
+                                            <div className='font-style-768'><div className='font-style'>Visibility: </div>{cityWeather.visibility / 1000} km</div>
                                         </div>
                                         <div className="border-l-2 h-12 border-l-2-main"></div>
                                         <div className="flex items-center">
@@ -133,7 +133,7 @@ const Home = () => {
 
                                         {/* It also includes information about wind speed and direction, as well as the sunrise and sunset times for the city. */}
                                         <div className="border-l-2 border-l-2-main border-white h-12"></div>
-                                        <div className="text-gray-700 text-xs flex flex-col bottom-right-home">
+                                        <div className="text-gray-700 text-xs flex flex-col bottom-right-home bottom-right-home-768">
                                             <div className="mb-1"><div className='font-style'>Sunrise: </div>{new Date(cityWeather.sys.sunrise * 1000).toLocaleTimeString([], { hour: 'numeric', minute: 'numeric' }).toLowerCase()}</div>
                                             <div ><div className='font-style'>Sunset: </div>{new Date(cityWeather.sys.sunset * 1000).toLocaleTimeString([], { hour: 'numeric', minute: 'numeric' }).toLowerCase()}</div>
                                         </div>
