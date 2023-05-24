@@ -784,6 +784,7 @@ Styling for the card element on hover */
         padding: auto 10px 0px 10px;
     }
 
+
     .text-gray-700.text-xs.flex.flex-col.bottom-left {
         font-size: 10px;
         margin-top: 5px;
@@ -1055,7 +1056,8 @@ Styling for the card element on hover */
     }
 
     .white-text {
-        margin-left: 25px;
+        margin-left: 35px;
+        display: inline;
     }
 
     .home-font {
