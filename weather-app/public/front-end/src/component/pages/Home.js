@@ -34,7 +34,7 @@ const Home = () => {
     return (
         <><div className="container">
             <div className="xcol">
-                <img src={watherIcon} alt="Cloud Icon" />
+                <img src={watherIcon} alt="Cloud Icon"/>
                 <div className="icon-font">Weather App</div>
             </div>
             <SearchBar />
