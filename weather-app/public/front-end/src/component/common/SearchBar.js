@@ -12,7 +12,7 @@ function SearchBar() {
 
             <button
                 type="submit"
-                className="hover:bg-purple-800 rounded-r text-white font-semibold px-4 py-2 search-bg"
+                className="hover:bg-purple-800 rounded-r text-white font-semibold px-4 py-2 search-bg search-bg-768"
             >
                 Add City
             </button>

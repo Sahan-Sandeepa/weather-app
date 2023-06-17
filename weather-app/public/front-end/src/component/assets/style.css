@@ -628,7 +628,7 @@ Styling for the card element on hover */
     background-color: #6c5dd3;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 715px) {
     .container {
         margin-top: 5%;
     }
@@ -653,6 +653,13 @@ Styling for the card element on hover */
         margin-bottom: 10px;
     }
 
+    .icon {
+        background-image: url('./wather-icon.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-size: 20%;
+    }
+
     .icon-font {
         font-size: 16px;
     }
@@ -672,7 +679,7 @@ Styling for the card element on hover */
     .md\:grid-cols-2,
     .lg\:grid-cols-3,
     .xl\:grid-cols-2 {
-        grid-template-columns: 1fr;
+        grid-template-columns: 0fr;
     }
 
     .gap-10 {
@@ -704,13 +711,9 @@ Styling for the card element on hover */
         text-align: center;
     }
 
-    .card-bg {
-        height: 100%;
-        margin-bottom: 0;
-    }
-
     .flexcol.contryName-font {
         font-size: 12px;
+        margin: 20px;
     }
 
     .text-md {
@@ -741,14 +744,12 @@ Styling for the card element on hover */
     .white-text {
         text-align: left;
         display: inline;
-        margin-top: 10%;
         justify-content: left;
     }
 
     .w-16.h-16 {
-        width: 80px;
-        height: 80px;
-        margin: 0 auto;
+        width: auto;
+        height: auto;
     }
 
     .text-4xl {
@@ -756,7 +757,7 @@ Styling for the card element on hover */
     }
 
     .mr-25 {
-        margin-right: 0;
+        margin: 0;
     }
 
     .text-xs #temp {
@@ -799,10 +800,11 @@ Styling for the card element on hover */
         font-size: 11px;
         margin-top: 5px;
         margin-left: 0;
+        margin-bottom: 0;
     }
 
     .text-lg.font-bold.mr-2.font {
-        font-size: 10px;
+        font-size: 8px;
         font-weight: 400;
         letter-spacing: normal;
     }
@@ -837,7 +839,6 @@ Styling for the card element on hover */
 
     .text-gray-700.text-xs.flex.flex-col.bottom-right-home {
         font-size: 10px;
-        margin-top: 5px;
     }
 
     /*search bar*/
@@ -855,7 +856,9 @@ Styling for the card element on hover */
     /* card in detailed */
 
     .card-inside {
-        width: 500px;
+        display: flex;
+        align-items: center;
+        width: min-content;
     }
 
     .mr-2-2 {
@@ -886,26 +889,30 @@ Styling for the card element on hover */
     .bottom-left-sub-card {
         margin-bottom: 10px;
         color: #ffffff;
-        margin-top: 90px;
+        margin-top: 10px;
         letter-spacing: normal;
         line-height: 20.03px;
-        font-size: 10px;
-            font-weight: 400;
+        font-size: 8px;
+        font-weight: 400px;
     }
 
     .fl-col-768 {
         margin-right: 0;
         margin-left: 0;
-        font-size: 10px;
-            font-weight: 400;
+        color: #ffffff;
+        margin-top: 10px;
+        font-size: 7px;
+        font-weight: 400;
     }
 
     .font-768 {
-        font-size: 5px;
-            font-weight: 400;
-            margin-left: 7px;
+        font-size: 8px;
+        font-weight: 400;
+        margin: 0px;
+
     }
-/* 
+
+    /* 
     .bottom-left-sub {
         margin-left: 3px;
         margin-right: 3px;
@@ -913,7 +920,7 @@ Styling for the card element on hover */
 
     .bottom-middle-card {
         margin-bottom: 1%;
-        margin-top: 90px;
+        margin-top: 10px;
     }
 
     .bottom-middle-sub {
@@ -930,7 +937,7 @@ Styling for the card element on hover */
     .bottom-right-card-sunrise {
         margin-left: 0px;
         margin-bottom: 6px;
-        margin-top: 90px;
+        margin-top: 0px;
         margin-right: 0px;
     }
 
@@ -951,8 +958,18 @@ Styling for the card element on hover */
         margin-right: 10px;
     }
 
-    .font-w-card {
+    .temp-main {
+        margin: 0;
         margin-right: 60px;
+    }
+
+        #temp {
+            margin-bottom: 30%;
+        }
+
+    .font-w-card {
+        margin-right: 28%;
+        margin-left: 0px;
     }
 
     .middle-card {
@@ -977,15 +994,13 @@ Styling for the card element on hover */
     }
 
     .bottom-crd {
-        height: 650px;
-        width: 300px;
-        margin-bottom: 0px;
-        margin-left: 75px;
+        height: 510px;
+        width: 275px;
     }
 
     .border-l-2 {
-        border-left: 2px solid #515566;
-        margin-top: 25%;
+        border-left: 3px solid #515566;
+        margin-top: 2%;
     }
 
     .border-l-2-main {
@@ -999,7 +1014,7 @@ Styling for the card element on hover */
     }
 
     .subcrd-line-devider {
-        margin-right: 35.3px;
+        max-width: 77%;
     }
 
     .bottom-middle-content {
@@ -1008,7 +1023,7 @@ Styling for the card element on hover */
     }
 
     .icon-font {
-        margin-top: 20%;
+        margin-top: 30%;
     }
 
     .footer__content {
@@ -1027,7 +1042,7 @@ Styling for the card element on hover */
 
 
 /* Styles for screens larger than 768px */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1281px) {
     .container {
         margin-top: 10%;
     }
@@ -1047,10 +1062,10 @@ Styling for the card element on hover */
 
     .bottom-left-768 {
         margin-left: 5px;
-        margin-top: 4px;
-        font-weight: 900;
-        width: 34%;
+        font-size: 10px;
+        font-weight: 400;
         letter-spacing: normal;
+        width: 34%;
         line-height: 20.00px;
     }
 
@@ -1088,14 +1103,17 @@ Styling for the card element on hover */
 
     .temp-main {
         width: 8px;
-        height: 40px;
         font-size: 0.8rem;
         font-weight: 200px;
     }
 
+    .bottom-crd {
+        margin-top: 6%;
+    }
+
     #temp {
         margin-left: 30px;
-        margin-bottom: 50px;
+        margin-bottom: 5px;
     }
 
     .border-l-2-main {
@@ -1103,9 +1121,12 @@ Styling for the card element on hover */
         margin-right: 5px;
     }
 
+    .middle-crd {
+        width: auto;
+    }
+
     .icon-font {
         font-size: 24px;
-        margin-bottom: 20px;
     }
 
     .container {
@@ -1154,9 +1175,19 @@ Styling for the card element on hover */
         width: 30%;
         letter-spacing: normal;
         line-height: 20.00px;
-        font-size: smaller;
+        font-size: 9px;
         font-weight: 400;
         letter-spacing: normal;
+        margin-right: 0;
+    }
+
+    .input-box {
+        margin-bottom: 10%;
+    }
+
+    .search-bg-768 {
+        margin-top: 8px;
+        margin-bottom: 10%;
     }
 
     .bottom-left-sub-card {
